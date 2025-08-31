@@ -1,0 +1,115 @@
+{
+  "name": "atlassian",
+  "colors": {
+    "background": "255 255 255",
+    "foreground": "23 43 77",
+    "card": "255 255 255",
+    "card-foreground": "23 43 77",
+    "popover": "255 255 255",
+    "popover-foreground": "23 43 77",
+    "primary": "0 82 204",
+    "primary-foreground": "255 255 255",
+    "secondary": "244 245 247",
+    "secondary-foreground": "23 43 77",
+    "muted": "244 245 247",
+    "muted-foreground": "107 119 140",
+    "accent": "0 82 204",
+    "accent-foreground": "255 255 255",
+    "destructive": "222 53 11",
+    "destructive-foreground": "255 255 255",
+    "border": "223 225 230",
+    "input": "255 255 255",
+    "ring": "0 82 204",
+    "surface": "255 255 255",
+    "text": "23 43 77",
+    "bg": "255 255 255"
+  },
+  "radius": {
+    "none": "0px",
+    "sm": "3px",
+    "md": "6px",
+    "lg": "8px",
+    "xl": "12px",
+    "full": "9999px"
+  },
+  "spacing": {
+    "0": "0px",
+    "1": "4px",
+    "2": "8px",
+    "3": "12px",
+    "4": "16px",
+    "5": "20px",
+    "6": "24px",
+    "7": "28px",
+    "8": "32px",
+    "9": "36px",
+    "10": "40px",
+    "11": "44px",
+    "12": "48px",
+    "13": "52px",
+    "14": "56px",
+    "15": "60px",
+    "16": "64px",
+    "17": "68px",
+    "18": "72px",
+    "19": "76px",
+    "20": "80px"
+  },
+  "typography": {
+    "font-family": {
+      "sans": [
+        "-apple-system",
+        "BlinkMacSystemFont",
+        "'Segoe UI'",
+        "Roboto",
+        "Oxygen",
+        "Ubuntu",
+        "Fira Sans",
+        "Droid Sans",
+        "'Helvetica Neue'",
+        "sans-serif"
+      ],
+      "mono": [
+        "SFMono-Regular",
+        "Consolas",
+        "'Liberation Mono'",
+        "Menlo",
+        "monospace"
+      ]
+    },
+    "font-size": {
+      "xs": "11px",
+      "sm": "12px",
+      "base": "14px",
+      "lg": "16px",
+      "xl": "18px",
+      "2xl": "20px",
+      "3xl": "24px",
+      "4xl": "29px",
+      "5xl": "35px",
+      "6xl": "42px"
+    },
+    "font-weight": {
+      "light": "300",
+      "normal": "400",
+      "medium": "500",
+      "semibold": "600",
+      "bold": "700",
+      "extrabold": "800"
+    },
+    "line-height": {
+      "none": "1",
+      "tight": "1.25",
+      "snug": "1.375",
+      "normal": "1.5",
+      "relaxed": "1.625",
+      "loose": "2"
+    }
+  },
+  "shadows": {
+    "sm": "0 1px 1px 0 rgba(9, 30, 66, 0.31), 0 0 1px 0 rgba(9, 30, 66, 0.25)",
+    "md": "0 1px 3px 0 rgba(9, 30, 66, 0.31), 0 0 1px 0 rgba(9, 30, 66, 0.25)",
+    "lg": "0 4px 8px -2px rgba(9, 30, 66, 0.25), 0 0 1px 0 rgba(9, 30, 66, 0.31)",
+    "xl": "0 8px 16px -4px rgba(9, 30, 66, 0.25), 0 0 1px 0 rgba(9, 30, 66, 0.31)"
+  }
+}

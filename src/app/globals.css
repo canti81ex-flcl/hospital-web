@@ -1,4 +1,6 @@
-@import "tailwindcss";
+@import "tailwindcss";   /* ← v4 기본 진입점 */
+@import "./theme.css";   /* ← (우리가 생성) JSON→CSS 토큰 파일 */
+
 
 :root {
   --background: #ffffff;
