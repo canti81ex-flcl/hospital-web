@@ -22,31 +22,31 @@ export default function YoutubeEventSection({
   eventHref = "/events"
 }: YoutubeEventSectionProps) {
   return (
-    <section className="bg-[rgb(var(--muted))] py-15">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="flex flex-col lg:flex-row gap-15 items-start justify-center">
+    <section className="bg-[rgb(var(--bg-subtle))] py-[var(--spacing-16)]">
+      <div className="mx-auto max-w-7xl px-[var(--spacing-6)]">
+        <div className="flex flex-col lg:flex-row gap-[var(--spacing-16)] items-start justify-center">
           {/* YouTube Card */}
-          <div className="bg-[rgb(var(--surface))] h-[280px] relative rounded-[var(--radius-xl)] border border-[rgb(var(--border))] overflow-hidden w-full lg:w-[600px]">
-            <div className="flex flex-col gap-5 h-full items-center justify-center px-10 py-8">
+          <div className="bg-[rgb(var(--bg-elevated))] h-[280px] relative rounded-[var(--card-radius)] border border-[rgb(var(--border-subtle))] shadow-[var(--card-shadow)] overflow-hidden w-full lg:w-[600px] hover:shadow-[var(--elevation-modal)] transition-shadow duration-300">
+            <div className="flex flex-col gap-[var(--spacing-5)] h-full items-center justify-center px-[var(--spacing-10)] py-[var(--spacing-8)]">
               {/* YouTube Icon */}
-              <div className="text-4xl text-[rgb(var(--destructive))]">
+              <div className="text-[var(--font-size-4xl)] text-[rgb(var(--danger-default))]">
                 📺
               </div>
               
               {/* YouTube Title */}
-              <h3 className="font-semibold text-2xl text-[rgb(var(--text))] leading-tight">
+              <h3 className="font-[var(--font-weight-semibold)] text-[var(--font-size-2xl)] text-[rgb(var(--fg-primary))] leading-[var(--line-height-tight)]">
                 {youtubeTitle}
               </h3>
               
               {/* YouTube Description */}
-              <div className="text-base text-[rgb(var(--muted-foreground))] leading-relaxed text-center whitespace-pre-line">
+              <div className="text-[var(--font-size-base)] text-[rgb(var(--fg-muted))] leading-[var(--line-height-relaxed)] text-center whitespace-pre-line">
                 {youtubeDescription}
               </div>
               
-              {/* YouTube CTA Button */}
+              {/* YouTube CTA Button - 디자인 시스템 danger variant */}
               <Link
                 href={youtubeHref}
-                className="bg-[rgb(var(--destructive))] hover:bg-[rgb(var(--destructive))]/.9 text-[rgb(var(--destructive-foreground))] font-semibold px-6 py-3 rounded-[var(--radius-md)] transition-colors duration-200 text-sm"
+                className="inline-flex items-center justify-center h-[var(--button-height)] px-[var(--button-paddingX)] bg-[rgb(var(--danger-default))] text-[rgb(var(--fg-onPrimary))] font-[var(--button-font-weight)] rounded-[var(--button-radius)] hover:opacity-90 transition-all duration-200 text-[var(--font-size-sm)]"
                 aria-label={youtubeCtaText}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -57,27 +57,27 @@ export default function YoutubeEventSection({
           </div>
           
           {/* Event Card */}
-          <div className="bg-[rgb(var(--surface))] h-[280px] relative rounded-[var(--radius-xl)] border border-[rgb(var(--border))] overflow-hidden w-full lg:w-[600px]">
-            <div className="flex flex-col gap-5 h-full items-center justify-center px-10 py-8">
+          <div className="bg-[rgb(var(--bg-elevated))] h-[280px] relative rounded-[var(--card-radius)] border border-[rgb(var(--border-subtle))] shadow-[var(--card-shadow)] overflow-hidden w-full lg:w-[600px] hover:shadow-[var(--elevation-modal)] transition-shadow duration-300">
+            <div className="flex flex-col gap-[var(--spacing-5)] h-full items-center justify-center px-[var(--spacing-10)] py-[var(--spacing-8)]">
               {/* Event Icon */}
-              <div className="text-4xl text-[rgb(var(--accent))]">
+              <div className="text-[var(--font-size-4xl)] text-[rgb(var(--warning-default))]">
                 🎉
               </div>
               
               {/* Event Title */}
-              <h3 className="font-semibold text-2xl text-[rgb(var(--text))] leading-tight">
+              <h3 className="font-[var(--font-weight-semibold)] text-[var(--font-size-2xl)] text-[rgb(var(--fg-primary))] leading-[var(--line-height-tight)]">
                 {eventTitle}
               </h3>
               
               {/* Event Description */}
-              <div className="text-base text-[rgb(var(--muted-foreground))] leading-relaxed text-center whitespace-pre-line">
+              <div className="text-[var(--font-size-base)] text-[rgb(var(--fg-muted))] leading-[var(--line-height-relaxed)] text-center whitespace-pre-line">
                 {eventDescription}
               </div>
               
-              {/* Event CTA Button */}
+              {/* Event CTA Button - 디자인 시스템 warning variant */}
               <Link
                 href={eventHref}
-                className="bg-[rgb(var(--accent))] hover:bg-[rgb(var(--accent))]/.9 text-[rgb(var(--accent-foreground))] font-semibold px-6 py-3 rounded-[var(--radius-md)] transition-colors duration-200 text-sm"
+                className="inline-flex items-center justify-center h-[var(--button-height)] px-[var(--button-paddingX)] bg-[rgb(var(--warning-default))] text-[rgb(var(--fg-onPrimary))] font-[var(--button-font-weight)] rounded-[var(--button-radius)] hover:opacity-90 transition-all duration-200 text-[var(--font-size-sm)]"
                 aria-label={eventCtaText}
               >
                 {eventCtaText}

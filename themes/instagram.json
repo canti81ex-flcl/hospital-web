@@ -1,0 +1,45 @@
+{
+    "$schema":"https://example.com/hospital-theme.schema.json",
+    "name":"instagram-care-stories","version":"1.0.0",
+    "meta":{ "description":"Emotional storytelling with soft gradient accents","brandTone":["emotional","visual","friendly"],"fontsNote":"Raleway (Headings), Open Sans (Body)" },
+    "primitives":{
+      "colors":{
+        "white":"#FFFFFF","black":"#121212",
+        "gray":{"50":"#FAFAFA","100":"#F4F4F5","200":"#E4E4E7","300":"#D4D4D8","400":"#A1A1AA","500":"#71717A","600":"#52525B","700":"#3F3F46","800":"#27272A","900":"#18181B"},
+        "grad":{"start":"#F58529","mid":"#DD2A7B","end":"#8134AF"},
+        "pink":{"500":"#DD2A7B"},"purple":{"500":"#7C3AED"},"orange":{"500":"#F59E0B"}
+      },
+      "font":{
+        "families":{"heading":"'Raleway', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Arial","body":"'Open Sans', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Arial","mono":"ui-monospace, Menlo, Consolas, monospace"},
+        "sizes":{"xs":"0.75rem","sm":"0.875rem","base":"1rem","lg":"1.125rem","xl":"1.25rem","2xl":"1.5rem","3xl":"1.875rem","4xl":"2.25rem"},
+        "weights":{"regular":400,"medium":600,"semibold":700,"bold":800},
+        "lineHeights":{"tight":1.1,"snug":1.3,"normal":1.55,"relaxed":1.75}
+      },
+      "radii":{"xs":"6px","sm":"10px","md":"14px","lg":"18px","xl":"24px","pill":"9999px"},
+      "spacing":{"0":"0px","1":"4px","2":"8px","3":"12px","4":"16px","5":"20px","6":"24px","8":"32px","10":"40px","12":"48px","16":"64px"},
+      "shadows":{"sm":"0 1px 2px rgba(0,0,0,0.06)","md":"0 6px 16px rgba(0,0,0,0.10)","lg":"0 12px 28px rgba(0,0,0,0.12)","focusRing":"0 0 0 3px rgba(221,42,123,0.35)"},
+      "breakpoints":{"sm":"640px","md":"768px","lg":"1024px","xl":"1280px","2xl":"1536px"}
+    },
+    "semantic":{
+      "bg":{"base":"{primitives.colors.white}","subtle":"{primitives.colors.gray.50}","elevated":"{primitives.colors.white}"},
+      "fg":{"primary":"{primitives.colors.black}","secondary":"{primitives.colors.gray.700}","muted":"{primitives.colors.gray.600}","onPrimary":"{primitives.colors.white}"},
+      "border":{"subtle":"{primitives.colors.gray.200}","strong":"{primitives.colors.gray.300}","focus":"{primitives.colors.pink.500}"},
+      "primary":{"default":"{primitives.colors.pink.500}","hover":"#E04893","active":"#B81E66","mutedBg":"#FFF0F6","mutedFg":"#E04893"},
+      "success":{"default":"#22C55E","mutedBg":"rgba(34,197,94,0.12)","mutedFg":"#22C55E"},
+      "warning":{"default":"#F59E0B","mutedBg":"rgba(245,158,11,0.12)","mutedFg":"#F59E0B"},
+      "danger":{"default":"#EF4444","mutedBg":"rgba(239,68,68,0.12)","mutedFg":"#EF4444"},
+      "elevation":{"card":"{primitives.shadows.md}","modal":"{primitives.shadows.lg}","popover":"{primitives.shadows.md}"}
+    },
+    "components":{
+      "button":{"radius":"{primitives.radii.pill}","height":"44px","paddingX":"20px","font":{"family":"{primitives.font.families.heading}","size":"{primitives.font.sizes.base}","weight":"{primitives.font.weights.bold}"},
+        "variants":{"primary":{"bg":"{semantic.primary.default}","fg":"{semantic.fg.onPrimary}","hoverBg":"{semantic.primary.hover}","activeBg":"{semantic.primary.active}","focusRing":"{primitives.shadows.focusRing}"},
+          "secondary":{"bg":"{semantic.bg.subtle}","fg":"{semantic.fg.primary}","border":"{semantic.border.strong}","hoverBg":"{semantic.bg.base}"},
+          "ghost":{"bg":"transparent","fg":"{semantic.primary.default}","hoverBg":"{semantic.primary.mutedBg}"}
+        }
+      },
+      "input":{"radius":"{primitives.radii.sm}","height":"42px","paddingX":"14px","bg":"{semantic.bg.base}","fg":"{semantic.fg.primary}","placeholder":"{primitives.colors.gray.500}","border":"{semantic.border.subtle}","focusBorder":"{semantic.border.focus}","focusRing":"{primitives.shadows.focusRing}"},
+      "card":{"radius":"{primitives.radii.lg}","bg":"{semantic.bg.elevated}","fg":"{semantic.fg.primary}","shadow":"{semantic.elevation.card}","border":"{semantic.border.subtle}"}
+    },
+    "dataViz":{"palette":["#DD2A7B","#7C3AED","#F59E0B","#22C55E","#0EA5E9","#EF4444"],"positive":"#22C55E","neutral":"#A1A1AA","negative":"#EF4444"}
+  }
+  

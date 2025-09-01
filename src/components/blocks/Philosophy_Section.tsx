@@ -33,33 +33,33 @@ export default function PhilosophySection({
   ]
 }: PhilosophySectionProps) {
   return (
-    <section className="bg-[rgb(var(--surface))] py-12 md:py-15">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="flex flex-col gap-10 items-start justify-center">
+    <section className="bg-[rgb(var(--bg-base))] py-[var(--spacing-12)] md:py-[var(--spacing-16)]">
+      <div className="mx-auto max-w-7xl px-[var(--spacing-6)]">
+        <div className="flex flex-col gap-[var(--spacing-10)] items-start justify-center">
           {/* Title */}
-          <h2 className="font-bold text-2xl sm:text-3xl text-[rgb(var(--text))] leading-tight">
+          <h2 className="font-[var(--font-weight-bold)] text-[var(--font-size-2xl)] sm:text-[var(--font-size-3xl)] text-[rgb(var(--fg-primary))] leading-[var(--line-height-tight)]">
             {title}
           </h2>
           
           {/* Values Container */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 w-full">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[var(--spacing-8)] w-full">
             {values.map((value, index) => (
               <div
                 key={index}
-                className="group bg-[rgb(var(--muted))] flex flex-col gap-4 items-center justify-center p-6 rounded-[var(--radius-lg)] min-h-[280px] text-center transition-all duration-300 ease-in-out hover:scale-115 hover:bg-[rgb(var(--primary))]"
+                className="group bg-[rgb(var(--bg-subtle))] flex flex-col gap-[var(--spacing-4)] items-center justify-center p-[var(--spacing-6)] rounded-[var(--card-radius)] min-h-[280px] text-center transition-all duration-300 ease-in-out hover:scale-105 hover:bg-[rgb(var(--primary-default))] border border-[rgb(var(--border-subtle))] shadow-[var(--card-shadow)] hover:shadow-[var(--elevation-modal)]"
               >
                 {/* Icon */}
-                <div className="text-4xl text-[rgb(var(--primary))] group-hover:text-[rgb(var(--primary-foreground))] transition-colors duration-300">
+                <div className="text-[var(--font-size-4xl)] text-[rgb(var(--primary-default))] group-hover:text-[rgb(var(--fg-onPrimary))] transition-colors duration-300">
                   {value.icon}
                 </div>
                 
                 {/* Name */}
-                <h3 className="font-semibold text-xl text-[rgb(var(--text))] group-hover:text-[rgb(var(--primary-foreground))] transition-colors duration-300 leading-tight">
+                <h3 className="font-[var(--font-weight-semibold)] text-[var(--font-size-xl)] text-[rgb(var(--fg-primary))] group-hover:text-[rgb(var(--fg-onPrimary))] transition-colors duration-300 leading-[var(--line-height-tight)]">
                   {value.name}
                 </h3>
                 
                 {/* Description */}
-                <p className="text-sm text-[rgb(var(--muted-foreground))] group-hover:text-[rgb(var(--primary-foreground))] transition-colors duration-300 leading-relaxed">
+                <p className="text-[var(--font-size-sm)] text-[rgb(var(--fg-muted))] group-hover:text-[rgb(var(--fg-onPrimary))] transition-colors duration-300 leading-[var(--line-height-relaxed)]">
                   {value.description}
                 </p>
               </div>

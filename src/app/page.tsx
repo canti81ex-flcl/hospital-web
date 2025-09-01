@@ -1,6 +1,6 @@
 import home from "@/content/pages/home.json";
-import { RenderBlocks } from "@/lib/blocks";
+import { RenderFullPageBlocks } from "@/lib/fullpage-blocks";
 
 export default function Page() {
-  return <RenderBlocks blocks={home.blocks} />;
+  return <RenderFullPageBlocks blocks={home.blocks} />;
 }

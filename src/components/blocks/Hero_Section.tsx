@@ -22,35 +22,35 @@ export default function HeroSection({
   href = "/smile-pro"
 }: HeroSectionProps) {
   return (
-    <section className="bg-[rgb(var(--surface))] py-12 md:py-20">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="flex flex-col lg:flex-row gap-12 items-center justify-center">
+    <section className="bg-[rgb(var(--bg-base))] py-[var(--spacing-12)] md:py-[var(--spacing-16)]">
+      <div className="mx-auto max-w-7xl px-[var(--spacing-6)]">
+        <div className="flex flex-col lg:flex-row gap-[var(--spacing-12)] items-center justify-center">
           {/* Hero Content */}
-          <div className="flex flex-col gap-6 w-full lg:w-[600px]">
-            <h1 className="font-extrabold text-4xl md:text-5xl text-[rgb(var(--text))] leading-tight">
+          <div className="flex flex-col gap-[var(--spacing-6)] w-full lg:w-[600px]">
+            <h1 className="font-bold text-[var(--font-size-4xl)] md:text-[var(--font-size-5xl)] text-[rgb(var(--fg-primary))] leading-[var(--line-height-tight)]">
               {title}
             </h1>
-            <h2 className="font-semibold text-xl md:text-2xl text-[rgb(var(--muted))] leading-tight">
+            <h2 className="font-semibold text-[var(--font-size-xl)] md:text-[var(--font-size-2xl)] text-[rgb(var(--fg-secondary))] leading-[var(--line-height-snug)]">
               {subtitle}
             </h2>
-            <p className="text-lg text-[rgb(var(--muted))] leading-relaxed">
+            <p className="text-[var(--font-size-lg)] text-[rgb(var(--fg-muted))] leading-[var(--line-height-relaxed)]">
               {description}
             </p>
             
             {/* Features */}
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-[var(--spacing-3)]">
               {features.map((feature, index) => (
-                <div key={index} className="text-base text-[rgb(var(--primary))] font-medium">
+                <div key={index} className="text-[var(--font-size-base)] text-[rgb(var(--primary-default))] font-medium">
                   {feature}
                 </div>
               ))}
             </div>
             
-            {/* CTA Button */}
+            {/* CTA Button - 디자인 시스템의 button 컴포넌트 스타일 적용 */}
             {ctaText && href && (
               <Link
                 href={href}
-                className="inline-flex items-center justify-center px-6 py-3 bg-[rgb(var(--primary))] text-[rgb(var(--primary-foreground))] font-medium rounded-[var(--radius-md)] hover:bg-[rgb(var(--primary))]/.9 transition-colors duration-200"
+                className="inline-flex items-center justify-center h-[var(--button-height)] px-[var(--button-paddingX)] bg-[rgb(var(--primary-default))] text-[rgb(var(--fg-onPrimary))] font-[var(--button-font-weight)] rounded-[var(--button-radius)] hover:bg-[rgb(var(--primary-hover))] active:bg-[rgb(var(--primary-active))] focus:outline-none focus:ring-[var(--button-focusRing)] transition-all duration-200 w-fit"
                 aria-label={ctaText}
               >
                 {ctaText}
@@ -59,8 +59,8 @@ export default function HeroSection({
           </div>
           
           {/* Hero Image */}
-          <div className="w-full lg:w-[500px] h-[250px] md:h-[400px] bg-[rgb(var(--muted))] rounded-[var(--radius-lg)] flex items-center justify-center">
-            <div className="text-[rgb(var(--muted-foreground))] text-lg">이미지 영역</div>
+          <div className="w-full lg:w-[500px] h-[250px] md:h-[400px] bg-[rgb(var(--bg-subtle))] rounded-[var(--card-radius)] shadow-[var(--card-shadow)] border border-[rgb(var(--border-subtle))] flex items-center justify-center">
+            <div className="text-[rgb(var(--fg-muted))] text-[var(--font-size-lg)]">이미지 영역</div>
           </div>
         </div>
       </div>

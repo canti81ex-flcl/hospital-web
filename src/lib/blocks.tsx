@@ -5,6 +5,13 @@ import type { ReactNode } from "react";
 const registry = {
   HeaderNav1:              dynamic(() => import("@/components/blocks/HeaderNav1")),
   Hero_Section:            dynamic(() => import("@/components/blocks/Hero_Section")),
+  Hero_Section_new:        dynamic(() => import("@/components/blocks/Hero_Section_new")),
+  Values_Section_new:      dynamic(() => import("@/components/blocks/Values_Section_new")),
+  Event_Section_new:       dynamic(() => import("@/components/blocks/Event_Section_new")),
+  YouTube_Section_new:     dynamic(() => import("@/components/blocks/YouTube_Section_new")),
+  Doctor_Section_new:      dynamic(() => import("@/components/blocks/Doctor_Section_new")),
+  Contact_Section_new:     dynamic(() => import("@/components/blocks/Contact_Section_new")),
+  Consultation_Section_new: dynamic(() => import("@/components/blocks/Consultation_Section_new")),
   Hero_Section_Carousel:   dynamic(() => import("@/components/blocks/Hero_Section_Carousel")),
   Philosophy_Section:      dynamic(() => import("@/components/blocks/Philosophy_Section")),
   Services_Section:         dynamic(() => import("@/components/blocks/Services_Section")),

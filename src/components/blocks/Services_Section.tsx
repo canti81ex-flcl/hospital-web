@@ -55,34 +55,34 @@ export default function ServicesSection({
   ]
 }: ServicesSectionProps) {
   return (
-    <section className="bg-[rgb(var(--muted))] py-15">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="flex flex-col gap-12 items-start justify-center">
+    <section className="bg-[rgb(var(--bg-subtle))] py-[var(--spacing-16)]">
+      <div className="mx-auto max-w-7xl px-[var(--spacing-6)]">
+        <div className="flex flex-col gap-[var(--spacing-12)] items-start justify-center">
           {/* Title */}
-          <h2 className="font-bold text-4xl text-[rgb(var(--text))] leading-tight">
+          <h2 className="font-[var(--font-weight-bold)] text-[var(--font-size-4xl)] text-[rgb(var(--fg-primary))] leading-[var(--line-height-tight)]">
             {title}
           </h2>
           
           {/* Services Container */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 w-full">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[var(--spacing-10)] w-full">
             {services.map((service, index) => (
               <div
                 key={index}
-                className="bg-[rgb(var(--surface))] h-[500px] relative rounded-[var(--radius-xl)] border border-[rgb(var(--border))] overflow-hidden"
+                className="bg-[rgb(var(--bg-elevated))] h-[500px] relative rounded-[var(--card-radius)] border border-[rgb(var(--border-subtle))] shadow-[var(--card-shadow)] overflow-hidden hover:shadow-[var(--elevation-modal)] transition-shadow duration-300"
               >
-                <div className="flex flex-col gap-5 h-full items-center justify-center px-8 py-10">
+                <div className="flex flex-col gap-[var(--spacing-5)] h-full items-center justify-center px-[var(--spacing-8)] py-[var(--spacing-10)]">
                   {/* Icon */}
-                  <div className="text-5xl text-[rgb(var(--primary))]">
+                  <div className="text-[var(--font-size-5xl)] text-[rgb(var(--primary-default))]">
                     {service.icon}
                   </div>
                   
                   {/* Title */}
-                  <h3 className="font-semibold text-2xl text-[rgb(var(--text))] leading-tight text-center">
+                  <h3 className="font-[var(--font-weight-semibold)] text-[var(--font-size-2xl)] text-[rgb(var(--fg-primary))] leading-[var(--line-height-tight)] text-center">
                     {service.title}
                   </h3>
                   
                   {/* Description */}
-                  <div className="text-base text-[rgb(var(--muted-foreground))] leading-relaxed text-center">
+                  <div className="text-[var(--font-size-base)] text-[rgb(var(--fg-muted))] leading-[var(--line-height-relaxed)] text-center">
                     {service.description.map((line, lineIndex) => (
                       <p key={lineIndex} className="mb-0">
                         {line}
@@ -90,10 +90,10 @@ export default function ServicesSection({
                     ))}
                   </div>
                   
-                  {/* CTA Button */}
+                  {/* CTA Button - 디자인 시스템 button secondary 스타일 적용 */}
                   <Link
                     href={service.href}
-                    className="bg-[rgb(var(--accent))] hover:bg-[rgb(var(--accent))]/.9 text-[rgb(var(--accent-foreground))] font-medium px-6 py-3 rounded-[var(--radius-md)] transition-colors duration-200"
+                    className="inline-flex items-center justify-center h-[var(--button-height)] px-[var(--button-paddingX)] bg-[rgb(var(--primary-default))] text-[rgb(var(--fg-onPrimary))] font-[var(--button-font-weight)] rounded-[var(--button-radius)] hover:bg-[rgb(var(--primary-hover))] active:bg-[rgb(var(--primary-active))] focus:outline-none focus:ring-[var(--button-focusRing)] transition-all duration-200"
                     aria-label={`${service.title} ${service.ctaText}`}
                   >
                     {service.ctaText}

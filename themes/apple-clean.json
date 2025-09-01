@@ -1,0 +1,194 @@
+{
+    "$schema": "https://example.com/hospital-theme.schema.json",
+    "name": "apple-clean",
+    "version": "1.0.0",
+    "meta": {
+      "description": "Minimal, high-contrast, clinical feel for hospitals",
+      "brandTone": ["clean", "trust", "precision"],
+      "fontsNote": "Use Google Fonts: Inter (UI/Body), Nunito Sans (Headings)"
+    },
+  
+    "primitives": {
+      "colors": {
+        "white": "#FFFFFF",
+        "black": "#000000",
+        "gray": {
+          "0": "#FFFFFF",
+          "50": "#F7F7F8",
+          "100": "#F2F2F3",
+          "200": "#E6E7E9",
+          "300": "#D4D6DA",
+          "400": "#B7BAC0",
+          "500": "#9AA0A6",
+          "600": "#6F7782",
+          "700": "#484F58",
+          "800": "#2C3137",
+          "900": "#1B1F24"
+        },
+        "blue": {
+          "50": "#EFF6FF",
+          "100": "#DBEAFE",
+          "200": "#BFDBFE",
+          "300": "#93C5FD",
+          "400": "#60A5FA",
+          "500": "#3B82F6",
+          "600": "#2563EB",
+          "700": "#1D4ED8",
+          "800": "#1E40AF",
+          "900": "#1E3A8A"
+        },
+        "green": { "500": "#10B981" },
+        "yellow": { "500": "#F59E0B" },
+        "red": { "500": "#EF4444" }
+      },
+  
+      "font": {
+        "families": {
+          "heading": "'Nunito Sans', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial",
+          "body": "'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial",
+          "mono": "ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace"
+        },
+        "sizes": { "xs": "0.75rem", "sm": "0.875rem", "base": "1rem", "lg": "1.125rem", "xl": "1.25rem", "2xl": "1.5rem", "3xl": "1.875rem", "4xl": "2.25rem" },
+        "weights": { "regular": 400, "medium": 500, "semibold": 600, "bold": 700 },
+        "lineHeights": { "tight": 1.1, "snug": 1.25, "normal": 1.5, "relaxed": 1.7 },
+        "letterSpacings": { "tight": "-0.01em", "normal": "0", "wide": "0.01em" }
+      },
+  
+      "radii": { "xs": "4px", "sm": "6px", "md": "10px", "lg": "14px", "xl": "20px", "pill": "9999px" },
+      "spacing": { "0": "0px", "1": "4px", "2": "8px", "3": "12px", "4": "16px", "5": "20px", "6": "24px", "8": "32px", "10": "40px", "12": "48px", "16": "64px" },
+      "shadows": {
+        "sm": "0 1px 2px rgba(27,31,36,0.06)",
+        "md": "0 4px 10px rgba(27,31,36,0.06), 0 1px 3px rgba(27,31,36,0.08)",
+        "lg": "0 10px 24px rgba(27,31,36,0.08), 0 2px 8px rgba(27,31,36,0.08)",
+        "focusRing": "0 0 0 3px rgba(59,130,246,0.35)"
+      },
+      "breakpoints": { "sm": "640px", "md": "768px", "lg": "1024px", "xl": "1280px", "2xl": "1536px" }
+    },
+  
+    "semantic": {
+      "bg": {
+        "base": "{primitives.colors.gray.0}",
+        "subtle": "{primitives.colors.gray.50}",
+        "elevated": "{primitives.colors.white}"
+      },
+      "fg": {
+        "primary": "{primitives.colors.black}",
+        "secondary": "{primitives.colors.gray.700}",
+        "muted": "{primitives.colors.gray.600}",
+        "onPrimary": "{primitives.colors.white}"
+      },
+      "border": {
+        "subtle": "{primitives.colors.gray.200}",
+        "strong": "{primitives.colors.gray.300}",
+        "focus": "{primitives.colors.blue.400}"
+      },
+      "primary": {
+        "default": "{primitives.colors.blue.600}",
+        "hover": "{primitives.colors.blue.700}",
+        "active": "{primitives.colors.blue.800}",
+        "mutedBg": "{primitives.colors.blue.50}",
+        "mutedFg": "{primitives.colors.blue.700}"
+      },
+      "success": {
+        "default": "{primitives.colors.green.500}",
+        "mutedBg": "rgba(16,185,129,0.08)",
+        "mutedFg": "{primitives.colors.green.500}"
+      },
+      "warning": {
+        "default": "{primitives.colors.yellow.500}",
+        "mutedBg": "rgba(245,158,11,0.10)",
+        "mutedFg": "{primitives.colors.yellow.500}"
+      },
+      "danger": {
+        "default": "{primitives.colors.red.500}",
+        "mutedBg": "rgba(239,68,68,0.08)",
+        "mutedFg": "{primitives.colors.red.500}"
+      },
+      "elevation": {
+        "card": "{primitives.shadows.md}",
+        "modal": "{primitives.shadows.lg}",
+        "popover": "{primitives.shadows.md}"
+      }
+    },
+  
+    "components": {
+      "button": {
+        "radius": "{primitives.radii.md}",
+        "height": "40px",
+        "paddingX": "16px",
+        "font": { "family": "{primitives.font.families.body}", "size": "{primitives.font.sizes.base}", "weight": "{primitives.font.weights.medium}" },
+        "variants": {
+          "primary": {
+            "bg": "{semantic.primary.default}",
+            "fg": "{semantic.fg.onPrimary}",
+            "hoverBg": "{semantic.primary.hover}",
+            "activeBg": "{semantic.primary.active}",
+            "focusRing": "{primitives.shadows.focusRing}"
+          },
+          "secondary": {
+            "bg": "{semantic.bg.subtle}",
+            "fg": "{semantic.fg.primary}",
+            "border": "{semantic.border.strong}",
+            "hoverBg": "{semantic.bg.base}"
+          },
+          "ghost": {
+            "bg": "transparent",
+            "fg": "{semantic.primary.default}",
+            "hoverBg": "{semantic.primary.mutedBg}"
+          },
+          "danger": {
+            "bg": "{semantic.danger.default}",
+            "fg": "{semantic.fg.onPrimary}",
+            "hoverBg": "rgba(239,68,68,0.90)"
+          }
+        }
+      },
+  
+      "input": {
+        "radius": "{primitives.radii.sm}",
+        "height": "40px",
+        "paddingX": "12px",
+        "bg": "{semantic.bg.base}",
+        "fg": "{semantic.fg.primary}",
+        "placeholder": "{primitives.colors.gray.500}",
+        "border": "{semantic.border.subtle}",
+        "focusBorder": "{semantic.border.focus}",
+        "focusRing": "{primitives.shadows.focusRing}"
+      },
+  
+      "card": {
+        "radius": "{primitives.radii.lg}",
+        "bg": "{semantic.bg.elevated}",
+        "fg": "{semantic.fg.primary}",
+        "shadow": "{semantic.elevation.card}",
+        "border": "{semantic.border.subtle}"
+      },
+  
+      "badge": {
+        "radius": "{primitives.radii.pill}",
+        "sizes": { "sm": "20px", "md": "24px" },
+        "variants": {
+          "neutral": { "bg": "{semantic.bg.subtle}", "fg": "{semantic.fg.secondary}" },
+          "info": { "bg": "{semantic.primary.mutedBg}", "fg": "{semantic.primary.mutedFg}" },
+          "success": { "bg": "{semantic.success.mutedBg}", "fg": "{semantic.success.mutedFg}" },
+          "warning": { "bg": "{semantic.warning.mutedBg}", "fg": "{semantic.warning.mutedFg}" },
+          "danger": { "bg": "{semantic.danger.mutedBg}", "fg": "{semantic.danger.mutedFg}" }
+        }
+      },
+  
+      "tooltip": {
+        "radius": "{primitives.radii.xs}",
+        "bg": "{primitives.colors.black}",
+        "fg": "{primitives.colors.white}",
+        "shadow": "0 6px 18px rgba(0,0,0,0.18)"
+      }
+    },
+  
+    "dataViz": {
+      "palette": ["#3B82F6", "#10B981", "#F59E0B", "#EF4444", "#6366F1", "#14B8A6"],
+      "positive": "{primitives.colors.green.500}",
+      "neutral": "{primitives.colors.gray.400}",
+      "negative": "{primitives.colors.red.500}"
+    }
+  }
+  

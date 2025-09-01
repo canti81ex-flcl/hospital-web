@@ -1,0 +1,47 @@
+{
+    "$schema": "https://example.com/hospital-theme.schema.json",
+    "name": "ibm-trust",
+    "version": "1.0.0",
+    "meta": { "description": "Scientific, enterprise-grade clarity", "brandTone": ["trust","science","data"], "fontsNote": "IBM Plex Sans/Serif (Google Fonts)" },
+    "primitives": {
+      "colors": {
+        "white":"#FFFFFF","black":"#0B0C0E",
+        "gray":{"50":"#F6F7F9","100":"#ECEFF3","200":"#DDE3EA","300":"#C8D1DC","400":"#A8B3C1","500":"#8794A3","600":"#667588","700":"#4A5563","800":"#2D3642","900":"#1A2027"},
+        "blue":{"50":"#EEF5FF","100":"#D9E8FF","200":"#BCD7FF","300":"#90B9FF","400":"#6C9DFF","500":"#4E82FF","600":"#2E66F3","700":"#1E53D6","800":"#1742AC","900":"#133781"},
+        "core":"#054ADA","green":{"500":"#119C77"},"red":{"500":"#D02941"},"yellow":{"500":"#F2B705"}
+      },
+      "font": {
+        "families": { "heading":"'IBM Plex Serif', ui-serif, Georgia, serif","body":"'IBM Plex Sans', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Arial","mono":"'IBM Plex Mono', ui-monospace, Menlo, Consolas, monospace" },
+        "sizes": { "xs":"0.75rem","sm":"0.875rem","base":"1rem","lg":"1.125rem","xl":"1.25rem","2xl":"1.5rem","3xl":"1.875rem","4xl":"2.25rem" },
+        "weights": { "regular":400,"medium":500,"semibold":600,"bold":700 },
+        "lineHeights": { "tight":1.15,"snug":1.3,"normal":1.55,"relaxed":1.75 }
+      },
+      "radii": { "xs":"3px","sm":"6px","md":"8px","lg":"12px","xl":"18px","pill":"9999px" },
+      "spacing": { "0":"0px","1":"4px","2":"8px","3":"12px","4":"16px","5":"20px","6":"24px","8":"32px","10":"40px","12":"48px","16":"64px" },
+      "shadows": { "sm":"0 1px 2px rgba(0,0,0,0.05)","md":"0 4px 10px rgba(0,0,0,0.07)","lg":"0 12px 24px rgba(0,0,0,0.10)","focusRing":"0 0 0 3px rgba(5,74,218,0.35)" },
+      "breakpoints": { "sm":"640px","md":"768px","lg":"1024px","xl":"1280px","2xl":"1536px" }
+    },
+    "semantic": {
+      "bg": { "base":"{primitives.colors.white}","subtle":"{primitives.colors.gray.50}","elevated":"{primitives.colors.white}" },
+      "fg": { "primary":"{primitives.colors.black}","secondary":"{primitives.colors.gray.700}","muted":"{primitives.colors.gray.600}","onPrimary":"{primitives.colors.white}" },
+      "border": { "subtle":"{primitives.colors.gray.200}","strong":"{primitives.colors.gray.300}","focus":"{primitives.colors.blue.400}" },
+      "primary": { "default":"{primitives.colors.core}","hover":"{primitives.colors.blue.700}","active":"{primitives.colors.blue.800}","mutedBg":"{primitives.colors.blue.50}","mutedFg":"{primitives.colors.blue.700}" },
+      "success": { "default":"{primitives.colors.green.500}","mutedBg":"rgba(17,156,119,0.10)","mutedFg":"{primitives.colors.green.500}" },
+      "warning": { "default":"{primitives.colors.yellow.500}","mutedBg":"rgba(242,183,5,0.12)","mutedFg":"{primitives.colors.yellow.500}" },
+      "danger": { "default":"{primitives.colors.red.500}","mutedBg":"rgba(208,41,65,0.10)","mutedFg":"{primitives.colors.red.500}" },
+      "elevation": { "card":"{primitives.shadows.md}","modal":"{primitives.shadows.lg}","popover":"{primitives.shadows.md}" }
+    },
+    "components": {
+      "button": { "radius":"{primitives.radii.md}","height":"40px","paddingX":"16px","font":{ "family":"{primitives.font.families.body}","size":"{primitives.font.sizes.base}","weight":"{primitives.font.weights.semibold}" },
+        "variants": {
+          "primary": { "bg":"{semantic.primary.default}","fg":"{semantic.fg.onPrimary}","hoverBg":"{semantic.primary.hover}","activeBg":"{semantic.primary.active}","focusRing":"{primitives.shadows.focusRing}" },
+          "secondary": { "bg":"{semantic.bg.subtle}","fg":"{semantic.fg.primary}","border":"{semantic.border.strong}","hoverBg":"{semantic.bg.base}" },
+          "ghost": { "bg":"transparent","fg":"{semantic.primary.default}","hoverBg":"{semantic.primary.mutedBg}" }
+        }
+      },
+      "input": { "radius":"{primitives.radii.sm}","height":"40px","paddingX":"12px","bg":"{semantic.bg.base}","fg":"{semantic.fg.primary}","placeholder":"{primitives.colors.gray.500}","border":"{semantic.border.subtle}","focusBorder":"{semantic.border.focus}","focusRing":"{primitives.shadows.focusRing}" },
+      "card": { "radius":"{primitives.radii.lg}","bg":"{semantic.bg.elevated}","fg":"{semantic.fg.primary}","shadow":"{semantic.elevation.card}","border":"{semantic.border.subtle}" }
+    },
+    "dataViz": { "palette":["#054ADA","#2E66F3","#119C77","#F2B705","#D02941","#8794A3"], "positive":"#119C77","neutral":"#8794A3","negative":"#D02941" }
+  }
+  

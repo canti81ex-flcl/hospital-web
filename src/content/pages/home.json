@@ -1,18 +1,13 @@
 {
     "blocks": [      
       { "type": "HeaderNav1" },
-      { "type": "Hero_Section" },
-      { "type": "Hero_Section_Carousel" },
-      { "type": "Philosophy_Section" },
-      { "type": "Services_Section" },
-      { "type": "Medical_Team_Section" },
-      { "type": "Review_Section" },
-      { "type": "Youtube_Event_Section" },
-      { "type": "Consultation_Section" },
-      { "type": "Footer_Section" },
-      { "type": "FloatingButtons" },
-      
-      { "type": "Footer" }
+      { "type": "Hero_Section_new" },
+      { "type": "Values_Section_new" },
+      { "type": "Event_Section_new" },
+      { "type": "YouTube_Section_new" },
+      { "type": "Doctor_Section_new" },
+      { "type": "Contact_Section_new" },      
+      { "type": "FloatingButtons" }
     ]
 }
   

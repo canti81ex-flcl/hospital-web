@@ -1,111 +1,53 @@
 {
-  "name": "starbucks",
-  "colors": {
-    "background": "255 255 255",
-    "foreground": "0 56 17",
-    "card": "255 255 255",
-    "card-foreground": "0 56 17",
-    "popover": "255 255 255",
-    "popover-foreground": "0 56 17",
-    "primary": "0 112 74",
-    "primary-foreground": "255 255 255",
-    "secondary": "245 245 245",
-    "secondary-foreground": "0 56 17",
-    "muted": "245 245 245",
-    "muted-foreground": "101 101 101",
-    "accent": "0 112 74",
-    "accent-foreground": "255 255 255",
-    "destructive": "220 38 38",
-    "destructive-foreground": "255 255 255",
-    "border": "229 229 229",
-    "input": "255 255 255",
-    "ring": "0 112 74",
-    "surface": "255 255 255",
-    "text": "0 56 17",
-    "bg": "255 255 255"
-  },
-  "radius": {
-    "none": "0px",
-    "sm": "4px",
-    "md": "8px",
-    "lg": "12px",
-    "xl": "16px",
-    "full": "9999px"
-  },
-  "spacing": {
-    "0": "0px",
-    "1": "4px",
-    "2": "8px",
-    "3": "12px",
-    "4": "16px",
-    "5": "20px",
-    "6": "24px",
-    "7": "28px",
-    "8": "32px",
-    "9": "36px",
-    "10": "40px",
-    "11": "44px",
-    "12": "48px",
-    "13": "52px",
-    "14": "56px",
-    "15": "60px",
-    "16": "64px",
-    "17": "68px",
-    "18": "72px",
-    "19": "76px",
-    "20": "80px"
-  },
-  "typography": {
-    "font-family": {
-      "sans": [
-        "SoDo Sans",
-        "-apple-system",
-        "BlinkMacSystemFont",
-        "'Segoe UI'",
-        "Roboto",
-        "sans-serif"
-      ],
-      "mono": [
-        "SFMono-Regular",
-        "Consolas",
-        "'Liberation Mono'",
-        "Menlo",
-        "monospace"
-      ]
+  "$schema": "https://example.com/hospital-theme.schema.json",
+  "name": "starbucks-care",
+  "version": "1.0.0",
+  "meta": { "description": "Warm, approachable care vibe", "brandTone": ["warm","friendly","calm"], "fontsNote": "Lato (Body), Playfair Display (Headings)" },
+  "primitives": {
+    "colors": {
+      "white": "#FFFFFF",
+      "black": "#111111",
+      "gray": { "50":"#FAF6EE","100":"#F3EEE5","200":"#E8E2D7","300":"#D9D1C4","400":"#B8B2A5","500":"#8E8A83","600":"#6E6B66","700":"#4F4D48","800":"#343330","900":"#1F1E1C" },
+      "green": { "50":"#E8F4EF","100":"#D2E8E0","200":"#A8D0C1","300":"#7FB8A3","400":"#4C987F","500":"#00704A","600":"#005C3D","700":"#004A31","800":"#003A26","900":"#002A1C" },
+      "accent": { "beige":"#FAF6EE" },
+      "yellow": { "500":"#CBA258" },
+      "red": { "500":"#D62B1F" }
     },
-    "font-size": {
-      "xs": "12px",
-      "sm": "14px",
-      "base": "16px",
-      "lg": "18px",
-      "xl": "20px",
-      "2xl": "24px",
-      "3xl": "30px",
-      "4xl": "36px",
-      "5xl": "48px",
-      "6xl": "60px"
+    "font": {
+      "families": {
+        "heading": "'Playfair Display', ui-serif, Georgia, 'Times New Roman', serif",
+        "body": "'Lato', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Arial",
+        "mono": "ui-monospace, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace"
+      },
+      "sizes": { "xs":"0.75rem","sm":"0.875rem","base":"1rem","lg":"1.125rem","xl":"1.25rem","2xl":"1.5rem","3xl":"1.875rem","4xl":"2.25rem" },
+      "weights": { "regular":400,"medium":500,"semibold":600,"bold":700 },
+      "lineHeights": { "tight":1.15,"snug":1.35,"normal":1.6,"relaxed":1.8 }
     },
-    "font-weight": {
-      "light": "300",
-      "normal": "400",
-      "medium": "500",
-      "semibold": "600",
-      "bold": "700",
-      "extrabold": "800"
-    },
-    "line-height": {
-      "none": "1",
-      "tight": "1.25",
-      "snug": "1.375",
-      "normal": "1.5",
-      "relaxed": "1.625",
-      "loose": "2"
-    }
+    "radii": { "xs":"4px","sm":"6px","md":"10px","lg":"14px","xl":"20px","pill":"9999px" },
+    "spacing": { "0":"0px","1":"4px","2":"8px","3":"12px","4":"16px","5":"20px","6":"24px","8":"32px","10":"40px","12":"48px","16":"64px" },
+    "shadows": { "sm":"0 1px 2px rgba(0,0,0,0.06)","md":"0 4px 10px rgba(0,0,0,0.08)","lg":"0 12px 28px rgba(0,0,0,0.1)","focusRing":"0 0 0 3px rgba(0,112,74,0.30)" },
+    "breakpoints": { "sm":"640px","md":"768px","lg":"1024px","xl":"1280px","2xl":"1536px" }
   },
-  "shadows": {
-    "sm": "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
-    "md": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
-    "lg": "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
-    "xl": "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
-  }
+  "semantic": {
+    "bg": { "base":"{primitives.colors.white}","subtle":"{primitives.colors.gray.50}","elevated":"{primitives.colors.white}" },
+    "fg": { "primary":"{primitives.colors.black}","secondary":"{primitives.colors.gray.700}","muted":"{primitives.colors.gray.600}","onPrimary":"{primitives.colors.white}" },
+    "border": { "subtle":"{primitives.colors.gray.200}","strong":"{primitives.colors.gray.300}","focus":"{primitives.colors.green.400}" },
+    "primary": { "default":"{primitives.colors.green.600}","hover":"{primitives.colors.green.700}","active":"{primitives.colors.green.800}","mutedBg":"{primitives.colors.green.50}","mutedFg":"{primitives.colors.green.700}" },
+    "success": { "default":"#2BAE66","mutedBg":"rgba(43,174,102,0.10)","mutedFg":"#2BAE66" },
+    "warning": { "default":"{primitives.colors.yellow.500}","mutedBg":"rgba(203,162,88,0.12)","mutedFg":"{primitives.colors.yellow.500}" },
+    "danger": { "default":"{primitives.colors.red.500}","mutedBg":"rgba(214,43,31,0.10)","mutedFg":"{primitives.colors.red.500}" },
+    "elevation": { "card":"{primitives.shadows.md}","modal":"{primitives.shadows.lg}","popover":"{primitives.shadows.md}" }
+  },
+  "components": {
+    "button": { "radius":"{primitives.radii.md}","height":"40px","paddingX":"18px","font":{ "family":"{primitives.font.families.body}","size":"{primitives.font.sizes.base}","weight":"{primitives.font.weights.medium}" },
+      "variants": {
+        "primary": { "bg":"{semantic.primary.default}","fg":"{semantic.fg.onPrimary}","hoverBg":"{semantic.primary.hover}","activeBg":"{semantic.primary.active}","focusRing":"{primitives.shadows.focusRing}" },
+        "secondary": { "bg":"{semantic.bg.subtle}","fg":"{semantic.fg.primary}","border":"{semantic.border.strong}","hoverBg":"{semantic.bg.base}" },
+        "ghost": { "bg":"transparent","fg":"{semantic.primary.default}","hoverBg":"{semantic.primary.mutedBg}" }
+      }
+    },
+    "input": { "radius":"{primitives.radii.sm}","height":"42px","paddingX":"14px","bg":"{semantic.bg.base}","fg":"{semantic.fg.primary}","placeholder":"{primitives.colors.gray.500}","border":"{semantic.border.subtle}","focusBorder":"{semantic.border.focus}","focusRing":"{primitives.shadows.focusRing}" },
+    "card": { "radius":"{primitives.radii.lg}","bg":"{semantic.bg.elevated}","fg":"{semantic.fg.primary}","shadow":"{semantic.elevation.card}","border":"{semantic.border.subtle}" }
+  },
+  "dataViz": { "palette":["#00704A","#CBA258","#2BAE66","#8E8A83","#4C987F","#E8E2D7"], "positive":"#2BAE66","neutral":"#8E8A83","negative":"#D62B1F" }
 }

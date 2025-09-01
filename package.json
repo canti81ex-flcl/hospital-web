@@ -4,12 +4,13 @@
   "private": true,
   "scripts": {
     "tokens:build": "node scripts/build-tokens.mjs",
-    "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
+    "dev": "npm run tokens:build && next dev --turbopack",
+    "build": "npm run tokens:build && next build --turbopack",
     "start": "next start",
     "lint": "eslint"
   },
   "dependencies": {
+    "@fullpage/react-fullpage": "^0.1.49",
     "next": "15.5.2",
     "react": "19.1.0",
     "react-dom": "19.1.0"

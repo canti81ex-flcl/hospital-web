@@ -1,0 +1,44 @@
+{
+    "$schema":"https://example.com/hospital-theme.schema.json",
+    "name":"microsoft-access","version":"1.0.0",
+    "meta":{ "description":"Accessible, colorful sections for clarity","brandTone":["accessible","clear","friendly"],"fontsNote":"Noto Sans (Body), Open Sans (Headings)" },
+    "primitives":{
+      "colors":{
+        "white":"#FFFFFF","black":"#111111",
+        "gray":{"50":"#F8FAFC","100":"#F1F5F9","200":"#E2E8F0","300":"#CBD5E1","400":"#94A3B8","500":"#64748B","600":"#475569","700":"#334155","800":"#1E293B","900":"#0F172A"},
+        "blue":{"500":"#0078D7"}, "green":{"500":"#7FBA00"}, "yellow":{"500":"#FFB900"}, "red":{"500":"#F25022"}
+      },
+      "font":{
+        "families":{"heading":"'Open Sans', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Arial","body":"'Noto Sans', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Arial","mono":"ui-monospace, Menlo, Consolas, monospace"},
+        "sizes":{"xs":"0.75rem","sm":"0.875rem","base":"1rem","lg":"1.125rem","xl":"1.25rem","2xl":"1.5rem","3xl":"1.875rem","4xl":"2.25rem"},
+        "weights":{"regular":400,"medium":500,"semibold":600,"bold":700},
+        "lineHeights":{"tight":1.15,"snug":1.3,"normal":1.6,"relaxed":1.8}
+      },
+      "radii":{"xs":"4px","sm":"6px","md":"8px","lg":"12px","xl":"18px","pill":"9999px"},
+      "spacing":{"0":"0px","1":"4px","2":"8px","3":"12px","4":"16px","5":"20px","6":"24px","8":"32px","10":"40px","12":"48px","16":"64px"},
+      "shadows":{"sm":"0 1px 2px rgba(0,0,0,0.05)","md":"0 4px 12px rgba(0,0,0,0.08)","lg":"0 10px 24px rgba(0,0,0,0.10)","focusRing":"0 0 0 3px rgba(0,120,215,0.35)"},
+      "breakpoints":{"sm":"640px","md":"768px","lg":"1024px","xl":"1280px","2xl":"1536px"}
+    },
+    "semantic":{
+      "bg":{"base":"{primitives.colors.white}","subtle":"{primitives.colors.gray.50}","elevated":"{primitives.colors.white}"},
+      "fg":{"primary":"{primitives.colors.black}","secondary":"{primitives.colors.gray.700}","muted":"{primitives.colors.gray.600}","onPrimary":"{primitives.colors.white}"},
+      "border":{"subtle":"{primitives.colors.gray.200}","strong":"{primitives.colors.gray.300}","focus":"{primitives.colors.blue.500}"},
+      "primary":{"default":"{primitives.colors.blue.500}","hover":"#006CBE","active":"#005FA6","mutedBg":"#E6F2FF","mutedFg":"#006CBE"},
+      "success":{"default":"{primitives.colors.green.500}","mutedBg":"rgba(127,186,0,0.12)","mutedFg":"{primitives.colors.green.500}"},
+      "warning":{"default":"{primitives.colors.yellow.500}","mutedBg":"rgba(255,185,0,0.16)","mutedFg":"{primitives.colors.yellow.500}"},
+      "danger":{"default":"{primitives.colors.red.500}","mutedBg":"rgba(242,80,34,0.12)","mutedFg":"{primitives.colors.red.500}"},
+      "elevation":{"card":"{primitives.shadows.md}","modal":"{primitives.shadows.lg}","popover":"{primitives.shadows.md}"}
+    },
+    "components":{
+      "button":{"radius":"{primitives.radii.md}","height":"40px","paddingX":"16px","font":{"family":"{primitives.font.families.heading}","size":"{primitives.font.sizes.base}","weight":"{primitives.font.weights.semibold}"},
+        "variants":{"primary":{"bg":"{semantic.primary.default}","fg":"{semantic.fg.onPrimary}","hoverBg":"{semantic.primary.hover}","activeBg":"{semantic.primary.active}","focusRing":"{primitives.shadows.focusRing}"},
+          "secondary":{"bg":"{semantic.bg.subtle}","fg":"{semantic.fg.primary}","border":"{semantic.border.strong}","hoverBg":"{semantic.bg.base}"},
+          "ghost":{"bg":"transparent","fg":"{semantic.primary.default}","hoverBg":"{semantic.primary.mutedBg}"}
+        }
+      },
+      "input":{"radius":"{primitives.radii.sm}","height":"40px","paddingX":"12px","bg":"{semantic.bg.base}","fg":"{semantic.fg.primary}","placeholder":"{primitives.colors.gray.500}","border":"{semantic.border.subtle}","focusBorder":"{semantic.border.focus}","focusRing":"{primitives.shadows.focusRing}"},
+      "card":{"radius":"{primitives.radii.lg}","bg":"{semantic.bg.elevated}","fg":"{semantic.fg.primary}","shadow":"{semantic.elevation.card}","border":"{semantic.border.subtle}"}
+    },
+    "dataViz":{"palette":["#0078D7","#7FBA00","#FFB900","#F25022","#6B7280","#14B8A6"],"positive":"#7FBA00","neutral":"#6B7280","negative":"#F25022"}
+  }
+  

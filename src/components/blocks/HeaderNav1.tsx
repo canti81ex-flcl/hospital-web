@@ -107,10 +107,16 @@ export default function HeaderNav1({
 
   return (
          <header 
-       className="fixed top-0 left-0 right-0 z-50 w-full bg-transparent transition-all duration-300 border-b border-[rgb(var(--border))] group"
+       className="fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 group"
+       style={{
+         backgroundColor: hoveredMenu ? 'rgb(var(--bg-elevated))' : 'transparent',
+         borderBottom: `1px solid rgb(var(--border-subtle))`,
+         backdropFilter: hoveredMenu ? 'blur(10px)' : 'none',
+         boxShadow: hoveredMenu ? 'var(--elevation-card)' : 'none'
+       }}
        onMouseLeave={() => setHoveredMenu(null)}
      >
-                               <nav className="flex items-center justify-center gap-10 px-10 py-5 group-hover:bg-white transition-all duration-300">
+                               <nav className="flex items-center justify-center gap-10 px-10 py-5 transition-all duration-300">
          {/* 데스크톱 메뉴 - Figma 디자인 그대로 구현 */}
          <div className="hidden lg:flex items-center gap-10">
            {menuItems.map((item, index) => (
@@ -121,7 +127,8 @@ export default function HeaderNav1({
              >
                <Link
                  href={item.href}
-                 className="font-semibold text-[16px] text-[rgb(var(--text))] whitespace-nowrap transition-all duration-200 hover:scale-120 hover:brightness-130"
+                 className="font-semibold text-[16px] whitespace-nowrap transition-all duration-200 hover:scale-120 hover:brightness-130"
+                 style={{ color: 'rgb(var(--fg-primary))' }}
                  rel="noopener"
                  aria-label={`${item.label} 페이지로 이동`}
                >
@@ -135,7 +142,8 @@ export default function HeaderNav1({
          <div className="lg:hidden flex items-center justify-between w-full">
            <Link 
              href="/"
-             className="font-semibold text-[16px] text-[rgb(var(--text))]"
+             className="font-semibold text-[16px]"
+            style={{ color: 'rgb(var(--fg-primary))' }}
              aria-label="온누리스마일 홈페이지로 이동"
            >
              {title}
@@ -146,7 +154,7 @@ export default function HeaderNav1({
                <Link
                  key={item.href}
                  href={item.href}
-                 className="font-semibold text-[14px] text-[rgb(var(--text))] hover:text-[rgb(var(--primary))] transition-colors whitespace-nowrap"
+                 className="font-semibold text-[14px] text-[rgb(var(--fg-primary))] hover:text-[rgb(var(--primary-default))] transition-colors whitespace-nowrap"
                  rel="noopener"
                >
                  {item.label}
@@ -171,19 +179,28 @@ export default function HeaderNav1({
 
              {/* 메가 드롭다운 */}
        {hoveredMenu && (
-                   <div className="absolute top-full left-0 w-full bg-transparent group-hover:bg-white transition-all duration-300 border border-[rgb(var(--border))] z-50">
+                   <div 
+                     className="absolute top-full left-0 w-full transition-all duration-300 border border-[rgb(var(--border-subtle))] z-50"
+                     style={{
+                       backgroundColor: 'rgb(var(--bg-elevated))',
+                       boxShadow: 'var(--elevation-card)'
+                     }}
+                   >
            <div className="flex items-start justify-center px-[50px] py-[30px]">
              {/* 모든 메뉴 컬럼을 항상 표시 */}
              {menuItems.map((item, index) => (
                <div key={item.label} className="relative">
                  <div 
-                   className="bg-transparent hover:bg-white transition-colors duration-200 flex flex-col gap-3 h-[340px] items-center justify-start overflow-clip pr-[15px] w-[186px]"
+                   className="transition-colors duration-200 flex flex-col gap-3 h-[340px] items-center justify-start overflow-clip pr-[15px] w-[186px]"
+                   style={{
+                     backgroundColor: hoveredSubMenu === item.label ? 'rgb(var(--bg-subtle))' : 'transparent'
+                   }}
                    onMouseEnter={() => setHoveredSubMenu(item.label)}
                    onMouseLeave={() => setHoveredSubMenu(null)}
                  >
                   {/* 회색 2px 바 with 중앙에서 퍼지는 애니메이션 */}
-                  <div className="relative h-[2px] w-[120px] bg-[rgb(var(--muted))] overflow-hidden">
-                    <div className={`absolute top-0 left-1/2 h-full bg-[rgb(var(--primary))] transform -translate-x-1/2 transition-all duration-300 ${
+                  <div className="relative h-[2px] w-[120px] bg-[rgb(var(--fg-muted))] overflow-hidden">
+                    <div className={`absolute top-0 left-1/2 h-full bg-[rgb(var(--primary-default))] transform -translate-x-1/2 transition-all duration-300 ${
                       hoveredSubMenu === item.label ? "w-full" : "w-0"
                     }`} />
                   </div>
@@ -191,9 +208,13 @@ export default function HeaderNav1({
                     <Link
                       key={subItem.href}
                       href={subItem.href}
-                      className={`text-[14px] text-[rgb(var(--muted-foreground))] transition-all duration-200 hover:scale-115 hover:opacity-70 whitespace-nowrap text-center ${
-                        subIndex >= 4 && item.label === "🎉 이벤트·후기" ? "font-semibold border-t border-[rgb(var(--border))] pt-3 mt-3" : ""
+                      className={`text-[14px] transition-all duration-200 hover:scale-115 hover:opacity-70 whitespace-nowrap text-center ${
+                        subIndex >= 4 && item.label === "🎉 이벤트·후기" ? "font-semibold pt-3 mt-3" : ""
                       }`}
+                      style={{
+                        color: 'rgb(var(--fg-muted))',
+                        borderTop: subIndex >= 4 && item.label === "🎉 이벤트·후기" ? `1px solid rgb(var(--border-subtle))` : 'none'
+                      }}
                       onMouseEnter={() => setHoveredSubMenu(item.label)}
                       onMouseLeave={() => setHoveredSubMenu(null)}
                       rel="noopener"
@@ -204,7 +225,10 @@ export default function HeaderNav1({
                 </div>
                 {/* 구분선 (마지막 컬럼 제외) */}
                 {index < menuItems.length - 1 && (
-                  <div className="absolute top-0 right-0 h-full w-px bg-[rgb(var(--border))]" />
+                  <div 
+                    className="absolute top-0 right-0 h-full w-px"
+                    style={{ backgroundColor: 'rgb(var(--border-subtle))' }}
+                  />
                 )}
               </div>
             ))}
