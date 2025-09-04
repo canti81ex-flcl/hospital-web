@@ -57,18 +57,18 @@ export default function DiagnosisSectionSnu({
 }: DiagnosisSectionSnuProps) {
   return (
     <section 
-      className="bg-[rgb(var(--surface))] box-border content-stretch flex flex-col items-center justify-center p-4 sm:p-8 md:p-12 lg:p-16 xl:p-20 relative size-full min-h-screen"
+      className="bg-[rgb(var(--surface))] box-border content-stretch flex flex-col items-center justify-center p-2 sm:p-4 md:p-8 lg:p-12 xl:p-16 relative size-full min-h-screen"
       data-name="Diagnosis Section SNU"
       data-anchor="diagnosis"
       id="diagnosis"
     >
       {/* Header */}
       <div 
-        className="bg-[rgb(var(--surface-variant))] box-border content-stretch flex flex-col gap-4 items-center justify-center relative shrink-0 rounded-[var(--radius-lg)] shadow-lg px-6 sm:px-8 py-6 sm:py-8 mb-8 sm:mb-10 md:mb-12 w-full max-w-4xl"
+        className="bg-[rgb(var(--surface-variant))] box-border content-stretch flex flex-col gap-3 sm:gap-4 items-center justify-center relative shrink-0 rounded-[var(--radius-lg)] shadow-lg px-4 sm:px-6 md:px-8 py-4 sm:py-6 md:py-8 mb-6 sm:mb-8 md:mb-10 lg:mb-12 w-full max-w-4xl"
         data-name="Diagnosis Header"
       >
         <div 
-          className="font-['Inter:Bold',_'Noto_Sans_KR:Bold',_sans-serif] font-bold leading-[0] not-italic relative shrink-0 text-[rgb(var(--primary-default))] text-[15px] sm:text-[16px] md:text-[17px]"
+          className="font-['Inter:Bold',_'Noto_Sans_KR:Bold',_sans-serif] font-bold leading-[0] not-italic relative shrink-0 text-[rgb(var(--primary-default))] text-[13px] sm:text-[15px] md:text-[16px] lg:text-[17px]"
           data-node-id="diagnosis-section-label"
         >
           <p className="leading-[normal] text-nowrap whitespace-pre">{title}</p>
@@ -77,43 +77,43 @@ export default function DiagnosisSectionSnu({
 
       {/* Diagnosis Cards Container */}
       <div 
-        className="bg-transparent content-stretch flex gap-4 sm:gap-6 md:gap-8 items-stretch justify-center relative shrink-0 max-w-7xl w-full flex-wrap"
+        className="bg-transparent content-stretch flex gap-3 sm:gap-4 md:gap-6 lg:gap-8 items-stretch justify-center relative shrink-0 max-w-7xl w-full flex-wrap"
         data-name="Diagnosis Cards Container"
       >
         {diagnoses.map((diagnosis, index) => (
           <div 
             key={diagnosis.id}
-            className="diagnosis-card bg-[rgb(var(--surface-variant))] box-border content-stretch flex flex-col items-start justify-start relative rounded-[20px] shrink-0 w-full sm:w-[350px] md:w-[380px] lg:w-[400px] shadow-lg hover:shadow-xl hover:shadow-[rgba(var(--primary),0.2)] transition-all duration-300 transform hover:scale-105 hover:border-[rgba(var(--primary),0.3)] border border-transparent min-h-[600px]"
+            className="diagnosis-card bg-[rgb(var(--surface-variant))] box-border content-stretch flex flex-col items-start justify-start relative rounded-[16px] sm:rounded-[20px] shrink-0 w-full sm:w-[320px] md:w-[350px] lg:w-[380px] xl:w-[400px] shadow-lg hover:shadow-xl hover:shadow-[rgba(var(--primary-default),0.2)] transition-all duration-300 transform hover:scale-105 hover:border-[rgba(var(--primary-default),0.3)] border border-transparent min-h-[500px] sm:min-h-[600px]"
             data-name={`Diagnosis Card ${index + 1}`}
           >
             {/* Text Content */}
             <div 
-              className="diagnosis-text-content bg-transparent content-stretch flex flex-col gap-3 sm:gap-4 items-start justify-start relative shrink-0 p-6 sm:p-8 md:p-[40px] pb-4 sm:pb-6 flex-1"
+              className="diagnosis-text-content bg-transparent content-stretch flex flex-col gap-2 sm:gap-3 md:gap-4 items-start justify-start relative shrink-0 p-4 sm:p-6 md:p-8 lg:p-[40px] pb-3 sm:pb-4 md:pb-6 flex-1"
               data-name={`Diagnosis ${index + 1} Text Content`}
             >
               <div 
-                className="font-['Inter:Bold',_'Noto_Sans_KR:Bold',_sans-serif] font-bold leading-[normal] not-italic relative shrink-0 text-[rgb(var(--primary-default))] text-[15px] sm:text-[16px] md:text-[17px]"
+                className="font-['Inter:Bold',_'Noto_Sans_KR:Bold',_sans-serif] font-bold leading-[normal] not-italic relative shrink-0 text-[rgb(var(--primary-default))] text-[13px] sm:text-[15px] md:text-[16px] lg:text-[17px]"
                 data-node-id={`diagnosis-${index + 1}-label`}
               >
                 <p className="leading-[normal] whitespace-nowrap">주요 진료과목</p>
               </div>
               
               <div 
-                className="diagnosis-title font-['Inter:Bold',_'Noto_Sans_KR:Bold',_sans-serif] font-bold leading-[normal] not-italic relative shrink-0 text-[rgb(var(--text))] text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px]"
+                className="diagnosis-title font-['Inter:Bold',_'Noto_Sans_KR:Bold',_sans-serif] font-bold leading-[normal] not-italic relative shrink-0 text-[rgb(var(--text))] text-[20px] sm:text-[24px] md:text-[28px] lg:text-[32px] xl:text-[36px]"
                 data-node-id={`diagnosis-${index + 1}-title`}
               >
                 <h3 className="leading-[normal] mb-0 break-words">{diagnosis.title}</h3>
               </div>
               
               <div 
-                className="diagnosis-subtitle font-['Inter:Regular',_'Noto_Sans_KR:Regular',_sans-serif] font-normal leading-[normal] not-italic relative shrink-0 text-[rgb(var(--text))] text-[16px] sm:text-[17px] md:text-[18px] lg:text-[19px]"
+                className="diagnosis-subtitle font-['Inter:Regular',_'Noto_Sans_KR:Regular',_sans-serif] font-normal leading-[normal] not-italic relative shrink-0 text-[rgb(var(--text))] text-[14px] sm:text-[16px] md:text-[17px] lg:text-[18px] xl:text-[19px]"
                 data-node-id={`diagnosis-${index + 1}-subtitle`}
               >
                 <p className="leading-[normal] break-words hyphens-auto">{diagnosis.subtitle}</p>
               </div>
               
               <div 
-                className="diagnosis-description font-['Inter:Regular',_'Noto_Sans_KR:Regular',_sans-serif] font-normal leading-[normal] not-italic relative shrink-0 text-[rgb(var(--text-secondary))] text-[14px] sm:text-[15px] md:text-[16px] flex-1"
+                className="diagnosis-description font-['Inter:Regular',_'Noto_Sans_KR:Regular',_sans-serif] font-normal leading-[normal] not-italic relative shrink-0 text-[rgb(var(--text-secondary))] text-[12px] sm:text-[14px] md:text-[15px] lg:text-[16px] flex-1"
                 data-node-id={`diagnosis-${index + 1}-description`}
               >
                 <div className="space-y-2">
@@ -128,13 +128,13 @@ export default function DiagnosisSectionSnu({
               {/* CTA Button */}
               <a 
                 href={`${href}#${diagnosis.id}`}
-                className="diagnosis-cta bg-transparent hover:bg-[rgb(var(--surface))] h-[50px] relative shrink-0 group transition-all duration-300 mt-auto"
+                className="diagnosis-cta bg-transparent hover:bg-[rgb(var(--surface))] h-[40px] sm:h-[45px] md:h-[50px] relative shrink-0 group transition-all duration-300 mt-auto"
                 data-name={`Diagnosis ${index + 1} Button`}
                 aria-label={`${diagnosis.title} 더 보기`}
               >
-                <div className="content-stretch flex gap-2 h-[50px] items-center justify-center overflow-clip relative px-6">
+                <div className="content-stretch flex gap-2 h-[40px] sm:h-[45px] md:h-[50px] items-center justify-center overflow-clip relative px-4 sm:px-6">
                   <div 
-                    className="font-['Inter:Medium',_sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[rgb(var(--text))] group-hover:text-[rgb(var(--primary-default))] text-[16px] whitespace-nowrap transition-colors duration-300"
+                    className="font-['Inter:Medium',_sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[rgb(var(--text))] group-hover:text-[rgb(var(--primary-default))] text-[14px] sm:text-[15px] md:text-[16px] whitespace-nowrap transition-colors duration-300"
                     data-node-id={`diagnosis-${index + 1}-cta`}
                   >
                     <span className="leading-[normal]">{ctaText}</span>
@@ -149,40 +149,40 @@ export default function DiagnosisSectionSnu({
 
             {/* Visual Area */}
             <div 
-              className="bg-[rgb(var(--surface))] overflow-clip relative rounded-[12px] shrink-0 w-full h-[200px] sm:h-[220px] md:h-[240px] lg:h-[260px] flex items-center justify-center mx-6 sm:mx-8 md:mx-[40px] mb-6 sm:mb-8 md:mb-[40px]"
+              className="bg-[rgb(var(--surface))] overflow-clip relative rounded-[8px] sm:rounded-[12px] shrink-0 w-full h-[160px] sm:h-[200px] md:h-[220px] lg:h-[240px] xl:h-[260px] flex items-center justify-center mx-4 sm:mx-6 md:mx-8 lg:mx-[40px] mb-4 sm:mb-6 md:mb-8 lg:mb-[40px]"
               data-name={`Diagnosis ${index + 1} Visual`}
               style={{ backgroundColor: diagnosis.visualColor }}
             >
-              <div className="text-center px-4">
+                              <div className="text-center px-2 sm:px-4">
                 <div 
-                  className="font-['Inter:Regular',_'Noto_Sans_KR:Regular',_sans-serif] font-normal leading-[normal] not-italic text-[rgb(var(--text))] text-[16px] sm:text-[17px] md:text-[18px]"
+                  className="font-['Inter:Regular',_'Noto_Sans_KR:Regular',_sans-serif] font-normal leading-[normal] not-italic text-[rgb(var(--text))] text-[14px] sm:text-[16px] md:text-[17px] lg:text-[18px]"
                   data-node-id={`diagnosis-${index + 1}-visual-text`}
                 >
                   <p className="mb-2 break-words">{diagnosis.visualTitle}</p>
-                  <p className="text-[14px] sm:text-[15px] text-[rgb(var(--text-secondary))] break-words">{diagnosis.visualSubtitle}</p>
+                  <p className="text-[12px] sm:text-[14px] md:text-[15px] text-[rgb(var(--text-secondary))] break-words">{diagnosis.visualSubtitle}</p>
                 </div>
                 
                 {/* Visual Elements */}
-                <div className="mt-6 space-y-2">
+                <div className="mt-3 sm:mt-4 md:mt-6 space-y-1 sm:space-y-2">
                   {diagnosis.id === 'cataract' && (
                     <>
-                      <div className="w-16 h-16 rounded-full bg-[rgb(var(--primary-default))] opacity-20 mx-auto"></div>
-                      <div className="w-12 h-12 rounded-full bg-[rgb(var(--primary-default))] opacity-40 mx-auto"></div>
-                      <div className="w-8 h-8 rounded-full bg-[rgb(var(--primary-default))] opacity-60 mx-auto"></div>
+                      <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-[rgb(var(--primary-default))] opacity-20 mx-auto"></div>
+                      <div className="w-8 h-8 sm:w-12 sm:h-12 rounded-full bg-[rgb(var(--primary-default))] opacity-40 mx-auto"></div>
+                      <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-[rgb(var(--primary-default))] opacity-60 mx-auto"></div>
                     </>
                   )}
                   {diagnosis.id === 'smile' && (
                     <>
-                      <div className="w-20 h-2 bg-[rgb(var(--primary-default))] opacity-60 mx-auto rounded"></div>
-                      <div className="w-16 h-2 bg-[rgb(var(--primary-default))] opacity-80 mx-auto rounded"></div>
-                      <div className="w-12 h-2 bg-[rgb(var(--primary-default))] mx-auto rounded"></div>
+                      <div className="w-16 h-1.5 sm:w-20 sm:h-2 bg-[rgb(var(--primary-default))] opacity-60 mx-auto rounded"></div>
+                      <div className="w-12 h-1.5 sm:w-16 sm:h-2 bg-[rgb(var(--primary-default))] opacity-80 mx-auto rounded"></div>
+                      <div className="w-8 h-1.5 sm:w-12 sm:h-2 bg-[rgb(var(--primary-default))] mx-auto rounded"></div>
                     </>
                   )}
                   {diagnosis.id === 'vision' && (
                     <>
-                      <div className="w-16 h-16 border-2 border-[rgb(var(--primary-default))] opacity-40 rounded-full mx-auto"></div>
-                      <div className="w-12 h-12 border-2 border-[rgb(var(--primary-default))] opacity-60 rounded-full mx-auto"></div>
-                      <div className="w-8 h-8 border-2 border-[rgb(var(--primary-default))] rounded-full mx-auto"></div>
+                      <div className="w-12 h-12 sm:w-16 sm:h-16 border-2 border-[rgb(var(--primary-default))] opacity-40 rounded-full mx-auto"></div>
+                      <div className="w-8 h-8 sm:w-12 sm:h-12 border-2 border-[rgb(var(--primary-default))] opacity-60 rounded-full mx-auto"></div>
+                      <div className="w-6 h-6 sm:w-8 sm:h-8 border-2 border-[rgb(var(--primary-default))] rounded-full mx-auto"></div>
                     </>
                   )}
                 </div>
@@ -193,11 +193,11 @@ export default function DiagnosisSectionSnu({
       </div>
 
       {/* Additional Info */}
-      <div className="mt-8 sm:mt-10 md:mt-12 text-center max-w-4xl px-4">
-        <div className="text-[rgb(var(--text-secondary))] text-[15px] sm:text-[16px] font-medium mb-4 break-words">
+      <div className="mt-6 sm:mt-8 md:mt-10 lg:mt-12 text-center max-w-4xl px-2 sm:px-4">
+        <div className="text-[rgb(var(--text-secondary))] text-[13px] sm:text-[15px] md:text-[16px] font-medium mb-3 sm:mb-4 break-words">
           SNU안과의 전문적인 진료과목으로 정확한 진단과 치료를 제공합니다
         </div>
-        <div className="text-[rgb(var(--primary-default))] text-[16px] sm:text-[17px] md:text-[18px] font-bold break-words">
+        <div className="text-[rgb(var(--primary-default))] text-[14px] sm:text-[16px] md:text-[17px] lg:text-[18px] font-bold break-words">
           노안·백내장 · 스마일2.0 · 시력교정
         </div>
       </div>

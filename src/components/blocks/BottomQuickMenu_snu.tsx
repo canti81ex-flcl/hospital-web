@@ -144,38 +144,38 @@ export default function BottomQuickMenuSnu({
         }}
       >
       {/* 메뉴 컨테이너 */}
-      <div className="h-full flex items-center justify-between px-4 sm:px-6 md:px-8 lg:px-12 xl:px-[50px] py-4">
+      <div className="h-full flex items-center justify-between px-2 sm:px-4 md:px-6 lg:px-8 xl:px-12 py-2 sm:py-3 md:py-4">
         {quickMenuItems.map((item, index) => (
           <a
             key={item.id}
             href={item.href}
-            className="group flex flex-col items-center justify-center gap-1 min-w-0 flex-1 px-2 py-2 rounded-lg transition-all duration-300 hover:bg-[rgb(var(--primary-mutedBg))] hover:scale-105 hover:shadow-lg"
+            className="group flex flex-col items-center justify-center gap-0.5 sm:gap-1 min-w-0 flex-1 px-1 sm:px-2 py-1 sm:py-2 rounded-lg transition-all duration-300 hover:bg-[rgb(var(--primary-mutedBg))] hover:scale-105 hover:shadow-lg"
             aria-label={`${item.label} 페이지로 이동`}
             rel={item.href.startsWith('http') ? "noopener noreferrer" : "noopener"}
             target={item.href.startsWith('http') ? "_blank" : undefined}
           >
             {/* 아이콘 */}
             <div 
-              className="w-5 h-5 flex items-center justify-center rounded-full transition-all duration-300 group-hover:scale-110 group-hover:shadow-md group-hover:bg-[rgb(var(--primary-default))]"
+              className="w-4 h-4 sm:w-5 sm:h-5 flex items-center justify-center rounded-full transition-all duration-300 group-hover:scale-110 group-hover:shadow-md group-hover:bg-[rgb(var(--primary-default))]"
               style={{
                 backgroundColor: item.color,
                 color: 'rgb(var(--surface))'
               }}
             >
-              <span className="text-xs font-bold group-hover:text-[rgb(var(--primary-default))] transition-colors duration-300">{item.icon}</span>
+              <span className="text-[10px] sm:text-xs font-bold group-hover:text-[rgb(var(--primary-default))] transition-colors duration-300">{item.icon}</span>
             </div>
             
             {/* 라벨 */}
             <div 
               className="text-center transition-colors duration-300 group-hover:text-[rgb(var(--primary-default))]"
               style={{
-                fontSize: '12px',
+                fontSize: '10px',
                 lineHeight: '1.2',
                 color: 'rgba(51, 51, 51, 0.6)',
                 fontFamily: 'Pretendard, Jost, "Malgun Gothic", sans-serif'
               }}
             >
-              <span className="block whitespace-nowrap overflow-hidden text-ellipsis max-w-[80px]">
+              <span className="block whitespace-nowrap overflow-hidden text-ellipsis max-w-[60px] sm:max-w-[80px]">
                 {item.label}
               </span>
             </div>

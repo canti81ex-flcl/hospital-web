@@ -122,17 +122,17 @@ export default function HeaderNavigationSnu({
   return (
     <>
       <header 
-        className="bg-[rgba(var(--surface),0.95)] backdrop-blur-sm box-border content-stretch flex items-center justify-between px-4 sm:px-6 md:px-8 lg:px-12 xl:px-[60px] py-4 sm:py-5 relative w-full z-50"
+        className="bg-[rgba(var(--surface),0.95)] backdrop-blur-sm box-border content-stretch flex items-center justify-between px-2 sm:px-4 md:px-6 lg:px-8 xl:px-12 py-2 sm:py-3 md:py-4 relative w-full z-50"
         data-name="Header Navigation SNU"
         data-anchor="header"
       >
         {/* Logo Section - Left aligned */}
         <div 
-          className="bg-[rgb(var(--primary-default))] box-border content-stretch flex gap-2 h-8 sm:h-9 md:h-10 items-center justify-center overflow-clip px-2 sm:px-3 py-1 sm:py-2 relative shrink-0"
+          className="bg-[rgb(var(--primary-default))] box-border content-stretch flex gap-1 sm:gap-2 h-6 sm:h-8 md:h-9 lg:h-10 items-center justify-center overflow-clip px-2 sm:px-3 py-1 sm:py-2 relative shrink-0"
           data-name="Logo"
         >
           <div 
-            className="font-['Inter:Bold',_sans-serif] font-bold leading-[0] not-italic relative shrink-0 text-[12px] sm:text-[14px] md:text-[16px] lg:text-[18px] text-nowrap text-[rgb(var(--on-primary))]"
+            className="font-['Inter:Bold',_sans-serif] font-bold leading-[0] not-italic relative shrink-0 text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] text-nowrap text-[rgb(var(--on-primary))]"
             data-node-id="logo-text"
           >
             <p className="leading-[normal] whitespace-pre">{title}</p>
@@ -181,7 +181,7 @@ export default function HeaderNavigationSnu({
             >
               <a 
                 href={item.href} 
-                className={`relative shrink-0 transition-all duration-200 px-3 py-2 rounded-md ${
+                className={`relative shrink-0 transition-all duration-200 px-2 sm:px-3 py-1 sm:py-2 rounded-md ${
                   currentPath === item.href 
                     ? 'text-[rgb(var(--primary-default))] bg-[rgb(var(--primary-light))]' 
                     : 'hover:text-[rgb(var(--primary-default))] hover:bg-[rgb(var(--primary-mutedBg))] hover:shadow-lg'
@@ -189,7 +189,7 @@ export default function HeaderNavigationSnu({
                 data-node-id={`nav-${item.title}`}
                 onClick={() => setCurrentPath(item.href)}
               >
-                <span className="leading-[normal] text-nowrap whitespace-pre font-medium">{item.title}</span>
+                <span className="leading-[normal] text-nowrap whitespace-pre font-medium text-[12px] sm:text-[14px] md:text-[16px]">{item.title}</span>
                 {/* Active indicator */}
                 {currentPath === item.href && (
                   <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-[rgb(var(--primary-default))] rounded-full" />
@@ -201,24 +201,24 @@ export default function HeaderNavigationSnu({
 
         {/* Mobile Hamburger Menu Button */}
         <button
-          className="lg:hidden bg-transparent border-none p-2 cursor-pointer"
+          className="lg:hidden bg-transparent border-none p-1 sm:p-2 cursor-pointer"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="메뉴 열기/닫기"
           aria-expanded={isMobileMenuOpen}
         >
-          <div className="w-6 h-6 flex flex-col justify-center items-center">
+          <div className="w-5 h-5 sm:w-6 sm:h-6 flex flex-col justify-center items-center">
             <span 
-              className={`block w-5 h-0.5 bg-[rgb(var(--text))] transition-all duration-300 ${
+              className={`block w-4 sm:w-5 h-0.5 bg-[rgb(var(--text))] transition-all duration-300 ${
                 isMobileMenuOpen ? 'rotate-45 translate-y-1' : '-translate-y-1'
               }`}
             />
             <span 
-              className={`block w-5 h-0.5 bg-[rgb(var(--text))] transition-all duration-300 ${
+              className={`block w-4 sm:w-5 h-0.5 bg-[rgb(var(--text))] transition-all duration-300 ${
                 isMobileMenuOpen ? 'opacity-0' : 'opacity-100'
               }`}
             />
             <span 
-              className={`block w-5 h-0.5 bg-[rgb(var(--text))] transition-all duration-300 ${
+              className={`block w-4 sm:w-5 h-0.5 bg-[rgb(var(--text))] transition-all duration-300 ${
                 isMobileMenuOpen ? '-rotate-45 -translate-y-1' : 'translate-y-1'
               }`}
             />
@@ -228,7 +228,7 @@ export default function HeaderNavigationSnu({
 
       {/* Mega Dropdown Menu */}
       <div 
-        className={`fixed top-0 left-0 w-full bg-[rgba(var(--surface),0.98)] backdrop-blur-sm shadow-lg z-40 pt-20 ${
+        className={`fixed top-0 left-0 w-full bg-[rgba(var(--surface),0.98)] backdrop-blur-sm shadow-lg z-40 pt-16 sm:pt-20 ${
           activeMenu && isDropdownVisible 
             ? 'opacity-100 translate-y-0 pointer-events-auto' 
             : 'opacity-0 translate-y-0 pointer-events-none'
@@ -314,14 +314,14 @@ export default function HeaderNavigationSnu({
 
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 bg-[rgba(var(--surface),0.98)] backdrop-blur-sm z-40 pt-20">
-          <div className="px-4 py-8">
-            <nav className="space-y-4">
+        <div className="fixed inset-0 bg-[rgba(var(--surface),0.98)] backdrop-blur-sm z-40 pt-16 sm:pt-20">
+          <div className="px-2 sm:px-4 py-4 sm:py-6">
+            <nav className="space-y-2 sm:space-y-4">
               {menuItems.map((item, index) => (
-                <div key={index} className="border-b border-[rgb(var(--border))] pb-4">
+                <div key={index} className="border-b border-[rgb(var(--border))] pb-2 sm:pb-4">
                   <a
                     href={item.href}
-                    className={`block font-['Inter:Bold',_'Noto_Sans_KR:Bold',_sans-serif] font-bold text-[18px] mb-3 transition-colors duration-200 ${
+                    className={`block font-['Inter:Bold',_'Noto_Sans_KR:Bold',_sans-serif] font-bold text-[16px] sm:text-[18px] mb-2 sm:mb-3 transition-colors duration-200 ${
                       currentPath === item.href 
                         ? 'text-[rgb(var(--primary-default))]' 
                         : 'text-[rgb(var(--text))]'
@@ -334,12 +334,12 @@ export default function HeaderNavigationSnu({
                     {item.title}
                   </a>
                   {item.submenu && (
-                    <ul className="space-y-2 ml-4">
+                    <ul className="space-y-1 sm:space-y-2 ml-2 sm:ml-4">
                       {item.submenu.map((subItem, subIndex) => (
                         <li key={subIndex}>
                           <a
                             href={subItem.href}
-                            className={`block text-[14px] transition-all duration-200 py-2 px-2 rounded-md ${
+                            className={`block text-[12px] sm:text-[14px] transition-all duration-200 py-1 sm:py-2 px-2 rounded-md ${
                               currentPath === subItem.href
                                 ? 'text-[rgb(var(--primary-default))] bg-[rgb(var(--primary-light))]'
                                 : 'text-[rgb(var(--text-secondary))] hover:text-[rgb(var(--primary-default))] hover:bg-[rgb(var(--primary-mutedBg))] hover:shadow-lg hover:scale-105'
