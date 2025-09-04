@@ -1,6 +1,6 @@
 "use client";
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 interface BottomQuickMenuSnuProps {
   title?: string;
@@ -8,6 +8,12 @@ interface BottomQuickMenuSnuProps {
   ctaText?: string;
   href?: string;
 }
+
+const THEMES = [
+  "antdesign-enterprise", "material-healthcare", "atlassian-teamwork", "orbit-travel", "starbucks-care", 
+  "apple-clean", "twitch-community", "netflix-impact", "stripe-clarity", "instagram-care-stories", 
+  "dropbox-simple", "microsoft-access", "ibm-trust"
+] as const;
 
 interface QuickMenuItem {
   id: string;
@@ -61,22 +67,82 @@ export default function BottomQuickMenuSnu({
   ctaText,
   href
 }: BottomQuickMenuSnuProps) {
+  const [theme, setTheme] = useState<(typeof THEMES)[number]>("antdesign-enterprise");
+  const [showThemeToggle, setShowThemeToggle] = useState(false);
+
+  // 테마 상태 동기화
+  useEffect(() => {
+    const currentTheme = document.documentElement.getAttribute("data-theme") as (typeof THEMES)[number] | null;
+    if (currentTheme && THEMES.includes(currentTheme)) {
+      setTheme(currentTheme);
+    }
+  }, []);
+
+  // 테마 변경 시 DOM 업데이트
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme", theme);
+  }, [theme]);
+
   return (
-    <div 
-      className="fixed bottom-0 left-0 right-0 z-[99999] bg-[rgba(var(--surface),0.95)] backdrop-blur-sm border-t border-[rgb(var(--border))] shadow-lg"
-      data-name="Bottom Quick Menu SNU"
-      id="bottom_quick"
-      style={{
-        height: '97px',
-        fontFamily: 'Pretendard, Jost, "Malgun Gothic", sans-serif',
-        position: 'fixed',
-        bottom: '0px',
-        left: '0px',
-        right: '0px',
-        zIndex: 99999,
-        width: '100%'
-      }}
-    >
+    <>
+      {/* 테마 토글 - 왼쪽 하단 BottomQuickMenu 위에 위치 */}
+      <div 
+        className="theme-toggle-container fixed bottom-[110px] left-4 z-[99998] rounded-lg border border-[rgb(var(--border))] bg-[rgba(var(--surface),0.95)] backdrop-blur-sm p-3 shadow-lg transition-all duration-300"
+        style={{
+          fontFamily: 'Pretendard, Jost, "Malgun Gothic", sans-serif'
+        }}
+      >
+        <div className="flex items-center gap-2">
+          <button
+            onClick={() => setShowThemeToggle(!showThemeToggle)}
+            className="flex items-center gap-2 px-3 py-2 rounded-md bg-[rgb(var(--primary))] text-[rgb(var(--primary-fg))] text-sm font-medium hover:bg-[rgb(var(--primary-hover))] transition-colors duration-200"
+            aria-label="테마 선택기 열기"
+          >
+            <span>🎨</span>
+            <span>테마</span>
+            <span className={`transform transition-transform duration-200 ${showThemeToggle ? 'rotate-180' : ''}`}>
+              ▼
+            </span>
+          </button>
+          
+          {showThemeToggle && (
+            <div className="theme-dropdown absolute bottom-full left-0 mb-2 w-64 rounded-lg border border-[rgb(var(--border))] bg-[rgb(var(--surface))] p-3 shadow-xl">
+              <div className="mb-2 text-sm font-medium text-[rgb(var(--text))]">테마 선택</div>
+              <select
+                className="w-full rounded-md border border-[rgb(var(--input-border))] bg-[rgb(var(--input-bg))] px-3 py-2 text-[rgb(var(--input-fg))] text-sm focus:border-[rgb(var(--primary))] focus:outline-none"
+                value={theme}
+                onChange={(e) => {
+                  setTheme(e.target.value as (typeof THEMES)[number]);
+                  setShowThemeToggle(false);
+                }}
+              >
+                {THEMES.map(t => (
+                  <option key={t} value={t}>
+                    {t.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}
+                  </option>
+                ))}
+              </select>
+            </div>
+          )}
+        </div>
+      </div>
+
+      {/* BottomQuickMenu */}
+      <div 
+        className="fixed bottom-0 left-0 right-0 z-[99999] bg-[rgba(var(--surface),0.95)] backdrop-blur-sm border-t border-[rgb(var(--border))] shadow-lg"
+        data-name="Bottom Quick Menu SNU"
+        id="bottom_quick"
+        style={{
+          height: '97px',
+          fontFamily: 'Pretendard, Jost, "Malgun Gothic", sans-serif',
+          position: 'fixed',
+          bottom: '0px',
+          left: '0px',
+          right: '0px',
+          zIndex: 99999,
+          width: '100%'
+        }}
+      >
       {/* 메뉴 컨테이너 */}
       <div className="h-full flex items-center justify-between px-4 sm:px-6 md:px-8 lg:px-12 xl:px-[50px] py-4">
         {quickMenuItems.map((item, index) => (
@@ -252,8 +318,39 @@ export default function BottomQuickMenuSnu({
           contain: layout style paint !important;
           transform: translate3d(0, 0, 0) !important;
         }
+        
+        /* 테마 토글 스타일 */
+        .theme-toggle-container {
+          backdrop-filter: blur(8px);
+          -webkit-backdrop-filter: blur(8px);
+        }
+        
+        /* 테마 토글 드롭다운 애니메이션 */
+        .theme-dropdown {
+          animation: slideUp 0.2s ease-out;
+        }
+        
+        @keyframes slideUp {
+          from {
+            opacity: 0;
+            transform: translateY(10px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        
+        /* 모바일에서 테마 토글 위치 조정 */
+        @media (max-width: 640px) {
+          .theme-toggle-container {
+            left: 8px;
+            bottom: 110px;
+          }
+        }
       `}</style>
-    </div>
+      </div>
+    </>
   );
 }
 
