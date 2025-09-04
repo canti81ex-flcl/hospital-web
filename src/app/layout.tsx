@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import ThemeToggle from "./theme-toggle";
+import { generateMetadata, generateStructuredData } from "@/lib/seo";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,17 +13,23 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "온누리스마일안과",
-  description: "전문적인 안과 의료 서비스",
-};
+export const metadata: Metadata = generateMetadata();
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const structuredData = generateStructuredData();
+  
   return (
     <html lang="ko" data-theme="antdesign-enterprise" className={`${geistSans.variable} ${geistMono.variable}`}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structuredData),
+          }}
+        />
+      </head>
       <body className="bg-[rgb(var(--bg-base))] text-[rgb(var(--fg-primary))] antialiased min-h-screen">
         {children}
-        <ThemeToggle />
       </body>
     </html>
   );

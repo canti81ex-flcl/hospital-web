@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 interface HeroSectionProps {
-  title: string;
+  title?: string;
   subtitle?: string;
   description?: string;
   features?: string[];

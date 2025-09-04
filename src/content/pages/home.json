@@ -1,13 +1,15 @@
 {
     "blocks": [      
-      { "type": "HeaderNav1" },
-      { "type": "Hero_Section_new" },
-      { "type": "Values_Section_new" },
-      { "type": "Event_Section_new" },
-      { "type": "YouTube_Section_new" },
-      { "type": "Doctor_Section_new" },
-      { "type": "Contact_Section_new" },      
-      { "type": "FloatingButtons" }
+      { "type": "HeaderNavigation_snu" },
+      { "type": "AboutSection_snu" },
+      { "type": "ClinicSection_snu" },
+      { "type": "DoctorSection_snu" },
+      { "type": "EquipmentSection_snu" },
+      { "type": "DiagnosisSection_snu" },
+      { "type": "EventSection_snu" },
+      { "type": "YouTubeSection_snu" },
+      { "type": "ReviewSection_snu" },
+      { "type": "ContactSection_snu" }
     ]
 }
   

@@ -1,6 +1,11 @@
 import home from "@/content/pages/home.json";
-import { RenderFullPageBlocks } from "@/lib/fullpage-blocks";
+import { RenderBlocks } from "@/lib/blocks";
+import FullPageWrapper from "@/components/FullPageWrapper";
 
 export default function Page() {
-  return <RenderFullPageBlocks blocks={home.blocks} />;
+  return (
+    <FullPageWrapper>
+      <RenderBlocks blocks={home.blocks} />
+    </FullPageWrapper>
+  );
 }

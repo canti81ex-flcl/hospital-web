@@ -227,7 +227,7 @@ export default function YouTube_Section_new({
               e.currentTarget.style.boxShadow = 'var(--elevation-button)';
             }}
             onFocus={(e) => {
-              e.currentTarget.style.ring = '4px solid rgba(var(--primary-default), 0.3)';
+              
             }}
             target="_blank"
             rel="noopener noreferrer"

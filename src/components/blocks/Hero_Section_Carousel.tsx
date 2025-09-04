@@ -16,7 +16,7 @@ interface HeroSlide {
 
 // The props for the carousel component will be an array of slides
 interface HeroSectionCarouselProps {
-  slides: HeroSlide[];
+  slides?: HeroSlide[];
 }
 
 // Default slide data if none are provided

@@ -15,6 +15,14 @@ interface ContactInfo {
   highlight?: string;
 }
 
+interface ContactFormData {
+  name: string;
+  phone: string;
+  treatments: TreatmentOption[];
+  message: string;
+  privacy: boolean;
+}
+
 interface ContactSectionNewProps {
   title?: string;
   formTitle?: string;
@@ -22,7 +30,7 @@ interface ContactSectionNewProps {
   phone?: string;
   treatments?: TreatmentOption[];
   contactInfo?: ContactInfo[];
-  onSubmit?: (formData: any) => void;
+  onSubmit?: (formData: ContactFormData) => void;
 }
 
 export default function Contact_Section_new({
@@ -223,7 +231,7 @@ export default function Contact_Section_new({
                     backgroundColor: 'rgb(var(--input-bg))',
                     border: '1px solid rgb(var(--input-border))',
                     color: 'rgb(var(--input-fg))',
-                    focusRingColor: 'rgba(var(--primary-default), 0.3)'
+                    
                   }}
                   placeholder="성함을 입력해주세요"
                   value={formData.name}
@@ -250,7 +258,7 @@ export default function Contact_Section_new({
                     backgroundColor: 'rgb(var(--input-bg))',
                     border: '1px solid rgb(var(--input-border))',
                     color: 'rgb(var(--input-fg))',
-                    focusRingColor: 'rgba(var(--primary-default), 0.3)'
+                    
                   }}
                   placeholder="연락처를 입력해주세요"
                   value={formData.phone}
@@ -339,7 +347,7 @@ export default function Contact_Section_new({
                     backgroundColor: 'rgb(var(--input-bg))',
                     border: '1px solid rgb(var(--input-border))',
                     color: 'rgb(var(--input-fg))',
-                    focusRingColor: 'rgba(var(--primary-default), 0.3)'
+                    
                   }}
                   placeholder="궁금한 내용을 자유롭게 작성해주세요"
                   value={formData.message}

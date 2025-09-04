@@ -8,12 +8,21 @@ interface ConsultationOption {
   checked: boolean;
 }
 
+interface ConsultationFormData {
+  name: string;
+  phone: string;
+  consultationType: string;
+  message: string;
+  selectedTreatment: string;
+  timestamp: string;
+}
+
 interface ConsultationSectionNewProps {
   title?: string;
   subtitle?: string;
   phoneNumber?: string;
   consultationOptions?: ConsultationOption[];
-  onSubmit?: (formData: any) => void;
+  onSubmit?: (formData: ConsultationFormData) => void;
 }
 
 export default function Consultation_Section_new({

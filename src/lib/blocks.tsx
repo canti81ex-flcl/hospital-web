@@ -3,25 +3,16 @@ import dynamic from "next/dynamic";
 import type { ReactNode } from "react";
 
 const registry = {
-  HeaderNav1:              dynamic(() => import("@/components/blocks/HeaderNav1")),
-  Hero_Section:            dynamic(() => import("@/components/blocks/Hero_Section")),
-  Hero_Section_new:        dynamic(() => import("@/components/blocks/Hero_Section_new")),
-  Values_Section_new:      dynamic(() => import("@/components/blocks/Values_Section_new")),
-  Event_Section_new:       dynamic(() => import("@/components/blocks/Event_Section_new")),
-  YouTube_Section_new:     dynamic(() => import("@/components/blocks/YouTube_Section_new")),
-  Doctor_Section_new:      dynamic(() => import("@/components/blocks/Doctor_Section_new")),
-  Contact_Section_new:     dynamic(() => import("@/components/blocks/Contact_Section_new")),
-  Consultation_Section_new: dynamic(() => import("@/components/blocks/Consultation_Section_new")),
-  Hero_Section_Carousel:   dynamic(() => import("@/components/blocks/Hero_Section_Carousel")),
-  Philosophy_Section:      dynamic(() => import("@/components/blocks/Philosophy_Section")),
-  Services_Section:         dynamic(() => import("@/components/blocks/Services_Section")),
-  Medical_Team_Section:    dynamic(() => import("@/components/blocks/Medical_Team_Section")),
-  Review_Section:           dynamic(() => import("@/components/blocks/Review_Section")),
-  Youtube_Event_Section:    dynamic(() => import("@/components/blocks/Youtube_Event_Section")),
-  Consultation_Section:     dynamic(() => import("@/components/blocks/Consultation_Section")),
-  Footer_Section:           dynamic(() => import("@/components/blocks/Footer_Section")),
-  FloatingButtons:          dynamic(() => import("@/components/blocks/FloatingButtons")),
-  Footer:                   dynamic(() => import("@/components/blocks/Footer")),
+  HeaderNavigation_snu:    dynamic(() => import("@/components/blocks/HeaderNavigation_snu")),
+  AboutSection_snu:        dynamic(() => import("@/components/blocks/AboutSection_snu")),
+  ClinicSection_snu:       dynamic(() => import("@/components/blocks/ClinicSection_snu")),
+  DoctorSection_snu:       dynamic(() => import("@/components/blocks/DoctorSection_snu")),
+  EquipmentSection_snu:    dynamic(() => import("@/components/blocks/EquipmentSection_snu")),
+  DiagnosisSection_snu:    dynamic(() => import("@/components/blocks/DiagnosisSection_snu")),
+  EventSection_snu:        dynamic(() => import("@/components/blocks/EventSection_snu")),
+  YouTubeSection_snu:      dynamic(() => import("@/components/blocks/YouTubeSection_snu")),
+  ReviewSection_snu:       dynamic(() => import("@/components/blocks/ReviewSection_snu")),
+  ContactSection_snu:      dynamic(() => import("@/components/blocks/ContactSection_snu")),
 } as const;
 
 type BlockType = keyof typeof registry;

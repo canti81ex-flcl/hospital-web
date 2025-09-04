@@ -30,7 +30,7 @@ export default function ThemeToggle() {
       <select
         className="rounded-[var(--input-radius)] border border-[rgb(var(--input-border))] bg-[rgb(var(--input-bg))] px-[var(--spacing-2)] py-[var(--spacing-1)] text-[rgb(var(--input-fg))] text-[var(--font-size-sm)] focus:border-[rgb(var(--input-focusBorder))] focus:outline-none"
         value={theme}
-        onChange={(e) => setTheme(e.target.value as any)}
+        onChange={(e) => setTheme(e.target.value as (typeof THEMES)[number])}
       >
         {THEMES.map(t => <option key={t} value={t}>{t}</option>)}
       </select>
