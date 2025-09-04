@@ -13,6 +13,7 @@ const registry = {
   YouTubeSection_snu:      dynamic(() => import("@/components/blocks/YouTubeSection_snu")),
   ReviewSection_snu:       dynamic(() => import("@/components/blocks/ReviewSection_snu")),
   ContactSection_snu:      dynamic(() => import("@/components/blocks/ContactSection_snu")),
+  BottomQuickMenu_snu:     dynamic(() => import("@/components/blocks/BottomQuickMenu_snu")),
 } as const;
 
 type BlockType = keyof typeof registry;

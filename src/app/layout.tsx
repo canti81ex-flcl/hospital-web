@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import "fullpage.js/dist/fullpage.min.css"; // fullpage.js CSS 추가
 import { generateMetadata, generateStructuredData } from "@/lib/seo";
 
 const geistSans = Geist({
