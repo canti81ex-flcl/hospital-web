@@ -827,7 +827,7 @@ export default function DetailSnu({
                   </p>
                   <p className="leading-[1.4] mb-0 text-[14px] sm:text-[16px] md:text-[18px] lg:text-[18.438px]">
                     <span className="">객관적 평가를 통해 </span>
-                    <span className="font-['Jost:Medium',_'Noto_Sans_KR:Regular',_sans-serif] font-medium">'안전한 스마일라식 수술이 가능한 안과'로 </span>
+                    <span className="font-['Jost:Medium',_'Noto_Sans_KR:Regular',_sans-serif] font-medium">&apos;안전한 스마일라식 수술이 가능한 안과&apos;로 </span>
                   </p>
                   <p className="leading-[1.4] text-[14px] sm:text-[16px] md:text-[18px] lg:text-[18.438px]">
                     <span className="font-['Jost:Medium',_'Noto_Sans_KR:Regular',_sans-serif] font-medium">확인 </span>
