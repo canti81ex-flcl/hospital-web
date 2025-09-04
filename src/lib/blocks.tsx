@@ -13,6 +13,12 @@ const registry = {
   YouTubeSection_snu:      dynamic(() => import("@/components/blocks/YouTubeSection_snu")),
   ReviewSection_snu:       dynamic(() => import("@/components/blocks/ReviewSection_snu")),
   ContactSection_snu:      dynamic(() => import("@/components/blocks/ContactSection_snu")),
+  Background_snu:          dynamic(() => import("@/components/blocks/Background_snu")),
+  StepImageDescription_snu: dynamic(() => import("@/components/blocks/StepImageDescription_snu")),
+  Detail_snu:              dynamic(() => import("@/components/blocks/Detail_snu")),
+  SixCircle_snu:           dynamic(() => import("@/components/blocks/SixCircle_snu")),
+  FourItemsWithAnimation_snu: dynamic(() => import("@/components/blocks/FourItemsWithAnimation_snu")),
+  ThreeVideoCards_snu:     dynamic(() => import("@/components/blocks/ThreeVideoCards_snu")),
   BottomQuickMenu_snu:     dynamic(() => import("@/components/blocks/BottomQuickMenu_snu")),
 } as const;
 

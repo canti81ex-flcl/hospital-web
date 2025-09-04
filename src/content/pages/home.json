@@ -9,7 +9,13 @@
       { "type": "EventSection_snu" },
       { "type": "YouTubeSection_snu" },
       { "type": "ReviewSection_snu" },
-      { "type": "ContactSection_snu" }
+      { "type": "ContactSection_snu" },
+      { "type": "StepImageDescription_snu" },
+      { "type": "Detail_snu" },
+      { "type": "SixCircle_snu" },
+      { "type": "FourItemsWithAnimation_snu" },
+      { "type": "ThreeVideoCards_snu" },
+      { "type": "Background_snu" }
     ]
 }
   
