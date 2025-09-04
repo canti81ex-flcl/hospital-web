@@ -1,6 +1,7 @@
 import home from "@/content/pages/home.json";
 import { RenderBlocks, type Block } from "@/lib/blocks";
 import FullPageWrapper from "@/components/FullPageWrapper";
+import BottomQuickMenuSnu from "@/components/blocks/BottomQuickMenu_snu";
 
 // home.json에서 헤더와 섹션을 분리하고 타입을 지정
 const allBlocks = home.blocks as Block[];
@@ -21,6 +22,9 @@ export default function Page() {
           </div>
         ))}
       </FullPageWrapper>
+
+      {/* 하단 퀵 메뉴는 FullPageWrapper 밖에 위치하여 항상 고정 */}
+      <BottomQuickMenuSnu />
     </>
   );
 }
