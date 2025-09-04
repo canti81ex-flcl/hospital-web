@@ -95,7 +95,7 @@ export default function BottomQuickMenuSnu({
         <div className="flex items-center gap-2">
           <button
             onClick={() => setShowThemeToggle(!showThemeToggle)}
-            className="flex items-center gap-2 px-3 py-2 rounded-md bg-[rgb(var(--primary))] text-[rgb(var(--primary-fg))] text-sm font-medium hover:bg-[rgb(var(--primary-hover))] transition-colors duration-200"
+            className="flex items-center gap-2 px-3 py-2 rounded-md bg-[rgb(var(--primary-default))] text-[rgb(var(--primary-fg))] text-sm font-medium hover:bg-[rgb(var(--primary-hover))] transition-colors duration-200"
             aria-label="테마 선택기 열기"
           >
             <span>🎨</span>
@@ -149,25 +149,25 @@ export default function BottomQuickMenuSnu({
           <a
             key={item.id}
             href={item.href}
-            className="group flex flex-col items-center justify-center gap-1 min-w-0 flex-1 px-2 py-2 rounded-lg transition-all duration-300 hover:bg-[rgb(var(--surface-variant))] hover:scale-105"
+            className="group flex flex-col items-center justify-center gap-1 min-w-0 flex-1 px-2 py-2 rounded-lg transition-all duration-300 hover:bg-[rgb(var(--primary-mutedBg))] hover:scale-105 hover:shadow-lg"
             aria-label={`${item.label} 페이지로 이동`}
             rel={item.href.startsWith('http') ? "noopener noreferrer" : "noopener"}
             target={item.href.startsWith('http') ? "_blank" : undefined}
           >
             {/* 아이콘 */}
             <div 
-              className="w-5 h-5 flex items-center justify-center rounded-full transition-all duration-300 group-hover:scale-110"
+              className="w-5 h-5 flex items-center justify-center rounded-full transition-all duration-300 group-hover:scale-110 group-hover:shadow-md group-hover:bg-[rgb(var(--primary-default))]"
               style={{
                 backgroundColor: item.color,
                 color: 'rgb(var(--surface))'
               }}
             >
-              <span className="text-xs font-bold">{item.icon}</span>
+              <span className="text-xs font-bold group-hover:text-[rgb(var(--primary-default))] transition-colors duration-300">{item.icon}</span>
             </div>
             
             {/* 라벨 */}
             <div 
-              className="text-center transition-colors duration-300 group-hover:text-[rgb(var(--primary))]"
+              className="text-center transition-colors duration-300 group-hover:text-[rgb(var(--primary-default))]"
               style={{
                 fontSize: '12px',
                 lineHeight: '1.2',

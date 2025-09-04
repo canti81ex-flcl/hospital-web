@@ -68,7 +68,7 @@ export default function ContactSectionSnu({
             <p className="leading-[normal] whitespace-pre">고객센터</p>
           </div>
           <div 
-            className="font-['Inter:Bold',_sans-serif] font-bold leading-[0] not-italic relative shrink-0 text-[32px] text-center text-[rgb(var(--primary))]"
+            className="font-['Inter:Bold',_sans-serif] font-bold leading-[0] not-italic relative shrink-0 text-[32px] text-center text-[rgb(var(--primary-default))]"
             data-node-id="customer-service-phone"
           >
             <p className="leading-[normal] whitespace-pre">02-6913-0000</p>
@@ -83,7 +83,7 @@ export default function ContactSectionSnu({
           </div>
           <a 
             href="tel:02-6913-0000"
-            className="bg-[rgb(var(--primary))] box-border content-stretch flex gap-2 h-[50px] items-center justify-center overflow-clip px-6 py-3 relative rounded-[25px] shrink-0 hover:bg-[rgb(var(--primary-dark))] transition-colors duration-200"
+            className="bg-[rgb(var(--primary-default))] box-border content-stretch flex gap-2 h-[50px] items-center justify-center overflow-clip px-6 py-3 relative rounded-[25px] shrink-0 hover:bg-[rgb(var(--primary-dark))] transition-colors duration-200"
             data-name="Call Button"
             aria-label="전화 상담하기"
           >
@@ -163,7 +163,7 @@ export default function ContactSectionSnu({
             href="https://map.kakao.com/link/search/서울특별시 강남구 강남대로 624 ICT타워"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-transparent h-[50px] relative rounded-[25px] shrink-0 border-2 border-[rgb(var(--border))] hover:border-[rgb(var(--primary))] transition-colors duration-200 flex items-center justify-center w-full"
+            className="bg-transparent h-[50px] relative rounded-[25px] shrink-0 border-2 border-[rgb(var(--border))] hover:border-[rgb(var(--primary-default))] transition-colors duration-200 flex items-center justify-center w-full"
             data-name="Map Button"
             aria-label="지도에서 위치 보기"
           >
@@ -198,7 +198,7 @@ export default function ContactSectionSnu({
             <a 
               key={index}
               href={link.href}
-              className="relative shrink-0 hover:text-[rgb(var(--primary))] transition-colors duration-200"
+              className="relative shrink-0 hover:text-[rgb(var(--primary-default))] transition-colors duration-200"
               data-node-id={`footer-link-${index}`}
             >
               <p className="leading-[normal] text-nowrap whitespace-pre">{link.text}</p>

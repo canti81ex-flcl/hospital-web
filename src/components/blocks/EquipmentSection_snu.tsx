@@ -27,7 +27,7 @@ export default function EquipmentSectionSnu({
       >
         {/* Section Label */}
         <div 
-          className="font-['Inter:Bold',_'Noto_Sans_KR:Bold',_sans-serif] font-bold leading-[0] not-italic relative shrink-0 text-[rgb(var(--primary))] text-[17px]"
+          className="font-['Inter:Bold',_'Noto_Sans_KR:Bold',_sans-serif] font-bold leading-[0] not-italic relative shrink-0 text-[rgb(var(--primary-default))] text-[17px]"
           data-node-id="equipment-label"
         >
           <p className="leading-[normal] whitespace-pre">SNU 첨단 장비</p>
@@ -77,7 +77,7 @@ export default function EquipmentSectionSnu({
         >
           <div className="content-stretch flex gap-2 h-[50px] items-center justify-center overflow-clip relative px-6">
             <div 
-              className="font-['Inter:Medium',_sans-serif] font-medium leading-[0] not-italic relative shrink-0 text-[rgb(var(--text))] group-hover:text-[rgb(var(--primary))] text-[16px] text-nowrap transition-colors duration-300"
+              className="font-['Inter:Medium',_sans-serif] font-medium leading-[0] not-italic relative shrink-0 text-[rgb(var(--text))] group-hover:text-[rgb(var(--primary-default))] text-[16px] text-nowrap transition-colors duration-300"
               data-node-id="cta-text"
             >
               <span className="leading-[normal] whitespace-pre">{ctaText}</span>
@@ -85,7 +85,7 @@ export default function EquipmentSectionSnu({
           </div>
           <div 
             aria-hidden="true" 
-            className="absolute border-2 border-[rgb(var(--border))] group-hover:border-[rgb(var(--primary))] border-solid inset-0 pointer-events-none rounded-[var(--radius)] transition-colors duration-300" 
+            className="absolute border-2 border-[rgb(var(--border))] group-hover:border-[rgb(var(--primary-default))] border-solid inset-0 pointer-events-none rounded-[var(--radius)] transition-colors duration-300" 
           />
         </a>
       </div>
@@ -107,19 +107,19 @@ export default function EquipmentSectionSnu({
           {/* Equipment List */}
           <div className="space-y-3 text-left">
             <div className="flex items-center space-x-3">
-              <div className="w-3 h-3 rounded-full bg-[rgb(var(--primary))]"></div>
+              <div className="w-3 h-3 rounded-full bg-[rgb(var(--primary-default))]"></div>
               <span className="text-[rgb(var(--text))] text-[16px] font-medium">스마일 라식 장비</span>
             </div>
             <div className="flex items-center space-x-3">
-              <div className="w-3 h-3 rounded-full bg-[rgb(var(--primary))]"></div>
+              <div className="w-3 h-3 rounded-full bg-[rgb(var(--primary-default))]"></div>
               <span className="text-[rgb(var(--text))] text-[16px] font-medium">토릭 ICL 검사 장비</span>
             </div>
             <div className="flex items-center space-x-3">
-              <div className="w-3 h-3 rounded-full bg-[rgb(var(--primary))]"></div>
+              <div className="w-3 h-3 rounded-full bg-[rgb(var(--primary-default))]"></div>
               <span className="text-[rgb(var(--text))] text-[16px] font-medium">정밀 진단 장비</span>
             </div>
             <div className="flex items-center space-x-3">
-              <div className="w-3 h-3 rounded-full bg-[rgb(var(--primary))]"></div>
+              <div className="w-3 h-3 rounded-full bg-[rgb(var(--primary-default))]"></div>
               <span className="text-[rgb(var(--text))] text-[16px] font-medium">수술 모니터링 시스템</span>
             </div>
           </div>
@@ -129,7 +129,7 @@ export default function EquipmentSectionSnu({
             <div className="text-[rgb(var(--text-secondary))] text-[14px] mb-2">
               최신 의료 기술과 첨단 장비로
             </div>
-            <div className="text-[rgb(var(--primary))] text-[16px] font-bold">
+            <div className="text-[rgb(var(--primary-default))] text-[16px] font-bold">
               안전하고 정확한 치료
             </div>
           </div>

@@ -50,7 +50,7 @@ export default function AboutSectionSnu({
         {/* CTA Button */}
         <a 
           href={href}
-          className="bg-[rgb(var(--primary))] hover:bg-[rgb(var(--primary-dark))] box-border content-stretch flex gap-2 h-[44px] sm:h-[48px] md:h-[50px] items-center justify-center overflow-clip px-4 sm:px-5 md:px-6 py-3 relative rounded-[25px] shrink-0 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[rgb(var(--primary))] focus:ring-offset-2"
+          className="bg-[rgb(var(--primary-default))] hover:bg-[rgb(var(--primary-dark))] box-border content-stretch flex gap-2 h-[44px] sm:h-[48px] md:h-[50px] items-center justify-center overflow-clip px-4 sm:px-5 md:px-6 py-3 relative rounded-[25px] shrink-0 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[rgb(var(--primary))] focus:ring-offset-2"
           data-name="About CTA Button"
           aria-label="SNU안과 소개 자세히 보기"
         >
@@ -67,7 +67,7 @@ export default function AboutSectionSnu({
           <div className="text-[rgb(var(--text-secondary))] text-[14px] sm:text-[15px] md:text-[16px] font-medium mb-2">
             서울특별시 강남구 강남대로 624 ICT타워 3층, 12층
           </div>
-          <div className="text-[rgb(var(--primary))] text-[16px] sm:text-[17px] md:text-[18px] font-bold">
+          <div className="text-[rgb(var(--primary-default))] text-[16px] sm:text-[17px] md:text-[18px] font-bold">
             스마일라식 · 렌즈삽입술 · 노안백내장 · 시력교정술
           </div>
         </div>

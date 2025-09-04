@@ -66,7 +66,7 @@ export default function EventSectionSnu({
         data-name="Event Header"
       >
         <div 
-          className="font-['Inter:Bold',_'Noto_Sans_KR:Bold',_sans-serif] font-bold relative shrink-0 text-[rgb(var(--primary))] text-[17px]"
+          className="font-['Inter:Bold',_'Noto_Sans_KR:Bold',_sans-serif] font-bold relative shrink-0 text-[rgb(var(--primary-default))] text-[17px]"
           data-node-id="event-section-label"
         >
           <p className="leading-[normal] text-nowrap whitespace-pre">이벤트</p>
@@ -94,7 +94,7 @@ export default function EventSectionSnu({
         {events.map((event, index) => (
           <div 
             key={event.id}
-            className="bg-[rgb(var(--surface))] box-border content-stretch flex flex-col items-center justify-center relative rounded-[16px] shrink-0 w-[380px] shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 min-w-[350px]"
+            className="bg-[rgb(var(--surface))] box-border content-stretch flex flex-col items-center justify-center relative rounded-[16px] shrink-0 w-[380px] shadow-lg hover:shadow-xl hover:shadow-[rgba(var(--primary),0.2)] transition-all duration-300 transform hover:scale-105 hover:border-[rgba(var(--primary),0.3)] border border-transparent min-w-[350px]"
             data-name={`Event Card ${index + 1}`}
           >
             {/* Event Image */}
@@ -131,7 +131,7 @@ export default function EventSectionSnu({
                 data-node-id={`event-${index + 1}-description`}
               >
                 <p className="mb-1 leading-relaxed">{event.subtitle}</p>
-                <p className="mb-0 leading-relaxed font-medium text-[rgb(var(--primary))]">{event.period}</p>
+                <p className="mb-0 leading-relaxed font-medium text-[rgb(var(--primary-default))]">{event.period}</p>
               </div>
             </div>
           </div>
@@ -143,22 +143,22 @@ export default function EventSectionSnu({
         <div className="text-[rgb(var(--text-secondary))] text-[16px] font-medium mb-4">
           SNU안과에서 진행하는 다양한 이벤트와 특별 혜택을 확인하세요
         </div>
-        <div className="text-[rgb(var(--primary))] text-[18px] font-bold">
+        <div className="text-[rgb(var(--primary-default))] text-[18px] font-bold">
           스마일프로 · 직장인 · 대학생 특별 이벤트
         </div>
         
         {/* Event Highlights */}
         <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="bg-[rgb(var(--surface))] p-4 rounded-[var(--radius)] shadow-sm">
-            <div className="text-[rgb(var(--primary))] text-[16px] font-bold mb-2">최대 50% 할인</div>
+            <div className="text-[rgb(var(--primary-default))] text-[16px] font-bold mb-2">최대 50% 할인</div>
             <div className="text-[rgb(var(--text-secondary))] text-[14px]">스마일프로 특별 이벤트</div>
           </div>
           <div className="bg-[rgb(var(--surface))] p-4 rounded-[var(--radius)] shadow-sm">
-            <div className="text-[rgb(var(--primary))] text-[16px] font-bold mb-2">야간 진료</div>
+            <div className="text-[rgb(var(--primary-default))] text-[16px] font-bold mb-2">야간 진료</div>
             <div className="text-[rgb(var(--text-secondary))] text-[14px]">직장인을 위한 특별 서비스</div>
           </div>
           <div className="bg-[rgb(var(--surface))] p-4 rounded-[var(--radius)] shadow-sm">
-            <div className="text-[rgb(var(--primary))] text-[16px] font-bold mb-2">학생 특가</div>
+            <div className="text-[rgb(var(--primary-default))] text-[16px] font-bold mb-2">학생 특가</div>
             <div className="text-[rgb(var(--text-secondary))] text-[14px]">대학생 여름방학 혜택</div>
           </div>
         </div>

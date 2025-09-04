@@ -72,7 +72,7 @@ export default function ReviewSectionSnu({
         data-name="Review Header"
       >
         <div 
-          className="font-['Inter:Bold',_'Noto_Sans_KR:Bold',_sans-serif] font-bold relative shrink-0 text-[rgb(var(--primary))] text-[17px]"
+          className="font-['Inter:Bold',_'Noto_Sans_KR:Bold',_sans-serif] font-bold relative shrink-0 text-[rgb(var(--primary-default))] text-[17px]"
           data-node-id="review-section-label"
         >
           <p className="leading-[normal] text-nowrap whitespace-pre">수술후기</p>
@@ -100,7 +100,7 @@ export default function ReviewSectionSnu({
         {reviews.map((review, index) => (
           <div 
             key={review.id}
-            className="bg-[rgb(var(--surface))] box-border content-stretch flex flex-col items-center justify-center relative rounded-[16px] shrink-0 w-[300px] shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 min-w-[280px]"
+            className="bg-[rgb(var(--surface))] box-border content-stretch flex flex-col items-center justify-center relative rounded-[16px] shrink-0 w-[300px] shadow-lg hover:shadow-xl hover:shadow-[rgba(var(--primary),0.2)] transition-all duration-300 transform hover:scale-105 hover:border-[rgba(var(--primary),0.3)] border border-transparent min-w-[280px]"
             data-name={`Review Card ${index + 1}`}
           >
             {/* Review Image */}
@@ -122,7 +122,7 @@ export default function ReviewSectionSnu({
               data-name={`Review ${index + 1} Info`}
             >
               <div 
-                className="font-['Inter:Bold',_'Noto_Sans_KR:Bold',_sans-serif] font-bold relative shrink-0 text-[rgb(var(--primary))] text-[14px]"
+                className="font-['Inter:Bold',_'Noto_Sans_KR:Bold',_sans-serif] font-bold relative shrink-0 text-[rgb(var(--primary-default))] text-[14px]"
                 data-node-id={`review-${index + 1}-type`}
               >
                 <p className="leading-[normal] text-nowrap whitespace-pre">{review.type}</p>
@@ -149,22 +149,22 @@ export default function ReviewSectionSnu({
         <div className="text-[rgb(var(--text-secondary))] text-[16px] font-medium mb-4">
           SNU안과에서 수술받은 환자들의 실제 후기를 확인하세요
         </div>
-        <div className="text-[rgb(var(--primary))] text-[18px] font-bold mb-6">
+        <div className="text-[rgb(var(--primary-default))] text-[18px] font-bold mb-6">
           800건 이상의 실제 수술후기
         </div>
         
         {/* Review Statistics */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="bg-[rgb(var(--surface))] p-6 rounded-[var(--radius)] shadow-sm">
-            <div className="text-[rgb(var(--primary))] text-[24px] font-bold mb-2">800+</div>
+            <div className="text-[rgb(var(--primary-default))] text-[24px] font-bold mb-2">800+</div>
             <div className="text-[rgb(var(--text-secondary))] text-[14px]">총 수술후기</div>
           </div>
           <div className="bg-[rgb(var(--surface))] p-6 rounded-[var(--radius)] shadow-sm">
-            <div className="text-[rgb(var(--primary))] text-[24px] font-bold mb-2">98%</div>
+            <div className="text-[rgb(var(--primary-default))] text-[24px] font-bold mb-2">98%</div>
             <div className="text-[rgb(var(--text-secondary))] text-[14px]">만족도</div>
           </div>
           <div className="bg-[rgb(var(--surface))] p-6 rounded-[var(--radius)] shadow-sm">
-            <div className="text-[rgb(var(--primary))] text-[24px] font-bold mb-2">4.9</div>
+            <div className="text-[rgb(var(--primary-default))] text-[24px] font-bold mb-2">4.9</div>
             <div className="text-[rgb(var(--text-secondary))] text-[14px]">평균 평점</div>
           </div>
         </div>
@@ -172,19 +172,19 @@ export default function ReviewSectionSnu({
         {/* Review Types */}
         <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
           <div className="bg-[rgb(var(--surface))] p-4 rounded-[var(--radius)] shadow-sm">
-            <div className="text-[rgb(var(--primary))] text-[16px] font-bold mb-1">스마일프로</div>
+            <div className="text-[rgb(var(--primary-default))] text-[16px] font-bold mb-1">스마일프로</div>
             <div className="text-[rgb(var(--text-secondary))] text-[12px]">3세대 시력교정술</div>
           </div>
           <div className="bg-[rgb(var(--surface))] p-4 rounded-[var(--radius)] shadow-sm">
-            <div className="text-[rgb(var(--primary))] text-[16px] font-bold mb-1">제로토릭 ICL</div>
+            <div className="text-[rgb(var(--primary-default))] text-[16px] font-bold mb-1">제로토릭 ICL</div>
             <div className="text-[rgb(var(--text-secondary))] text-[12px]">렌즈삽입술</div>
           </div>
           <div className="bg-[rgb(var(--surface))] p-4 rounded-[var(--radius)] shadow-sm">
-            <div className="text-[rgb(var(--primary))] text-[16px] font-bold mb-1">노안백내장</div>
+            <div className="text-[rgb(var(--primary-default))] text-[16px] font-bold mb-1">노안백내장</div>
             <div className="text-[rgb(var(--text-secondary))] text-[12px]">동시 치료</div>
           </div>
           <div className="bg-[rgb(var(--surface))] p-4 rounded-[var(--radius)] shadow-sm">
-            <div className="text-[rgb(var(--primary))] text-[16px] font-bold mb-1">맞춤형</div>
+            <div className="text-[rgb(var(--primary-default))] text-[16px] font-bold mb-1">맞춤형</div>
             <div className="text-[rgb(var(--text-secondary))] text-[12px]">시력교정술</div>
           </div>
         </div>

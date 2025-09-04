@@ -71,7 +71,7 @@ export default function DoctorSectionSnu({
         data-name="Doctor Header"
       >
         <div 
-          className="font-['Inter:Bold',_'Noto_Sans_KR:Bold',_sans-serif] font-bold relative shrink-0 text-[rgb(var(--primary))] text-[15px] sm:text-[16px] md:text-[17px]"
+          className="font-['Inter:Bold',_'Noto_Sans_KR:Bold',_sans-serif] font-bold relative shrink-0 text-[rgb(var(--primary-default))] text-[15px] sm:text-[16px] md:text-[17px]"
           data-node-id="doctor-section-label"
         >
           <p className="leading-[normal] text-nowrap whitespace-pre">SNU의료진</p>
@@ -99,7 +99,7 @@ export default function DoctorSectionSnu({
                       {doctors.map((doctor, index) => (
                 <div 
                   key={index}
-                  className="bg-[rgb(var(--surface))] box-border content-stretch flex flex-col items-center justify-center px-4 sm:px-6 py-6 sm:py-8 relative rounded-[16px] shrink-0 w-full sm:w-[280px] md:w-[300px] shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                  className="bg-[rgb(var(--surface))] box-border content-stretch flex flex-col items-center justify-center px-4 sm:px-6 py-6 sm:py-8 relative rounded-[16px] shrink-0 w-full sm:w-[280px] md:w-[300px] shadow-lg hover:shadow-xl hover:shadow-[rgba(var(--primary),0.2)] transition-all duration-300 transform hover:scale-105 hover:border-[rgba(var(--primary),0.3)] border border-transparent"
                   data-name={`Doctor Card ${index + 1}`}
                   itemScope
                   itemType="https://schema.org/Physician"
@@ -129,7 +129,7 @@ export default function DoctorSectionSnu({
                 <h3 className="leading-[normal] mb-0" itemProp="name">{doctor.name}</h3>
               </div>
               <div 
-                className="font-['Inter:Semi_Bold',_'Noto_Sans_KR:Bold',_sans-serif] font-semibold relative shrink-0 text-[rgb(var(--primary))] text-[14px] sm:text-[15px] md:text-[16px]"
+                className="font-['Inter:Semi_Bold',_'Noto_Sans_KR:Bold',_sans-serif] font-semibold relative shrink-0 text-[rgb(var(--primary-default))] text-[14px] sm:text-[15px] md:text-[16px]"
                 data-node-id={`doctor-${index + 1}-position`}
               >
                 <p className="leading-[normal]" itemProp="jobTitle">{doctor.position}</p>
@@ -154,7 +154,7 @@ export default function DoctorSectionSnu({
         <div className="text-[rgb(var(--text-secondary))] text-[14px] sm:text-[15px] md:text-[16px] font-medium mb-3 sm:mb-4">
           하버드대학교 연구교수 출신의 전문의료진이 최첨단 시력교정술을 제공합니다
         </div>
-        <div className="text-[rgb(var(--primary))] text-[16px] sm:text-[17px] md:text-[18px] font-bold">
+        <div className="text-[rgb(var(--primary-default))] text-[16px] sm:text-[17px] md:text-[18px] font-bold">
           스마일라식 · 렌즈삽입술 · 노안백내장 · 시력교정술
         </div>
       </div>

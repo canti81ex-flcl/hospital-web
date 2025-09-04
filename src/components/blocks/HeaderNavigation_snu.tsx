@@ -128,7 +128,7 @@ export default function HeaderNavigationSnu({
       >
         {/* Logo Section - Left aligned */}
         <div 
-          className="bg-[rgb(var(--primary))] box-border content-stretch flex gap-2 h-8 sm:h-9 md:h-10 items-center justify-center overflow-clip px-2 sm:px-3 py-1 sm:py-2 relative shrink-0"
+          className="bg-[rgb(var(--primary-default))] box-border content-stretch flex gap-2 h-8 sm:h-9 md:h-10 items-center justify-center overflow-clip px-2 sm:px-3 py-1 sm:py-2 relative shrink-0"
           data-name="Logo"
         >
           <div 
@@ -183,8 +183,8 @@ export default function HeaderNavigationSnu({
                 href={item.href} 
                 className={`relative shrink-0 transition-all duration-200 px-3 py-2 rounded-md ${
                   currentPath === item.href 
-                    ? 'text-[rgb(var(--primary))] bg-[rgb(var(--primary-light))]' 
-                    : 'hover:text-[rgb(var(--primary))]'
+                    ? 'text-[rgb(var(--primary-default))] bg-[rgb(var(--primary-light))]' 
+                    : 'hover:text-[rgb(var(--primary-default))] hover:bg-[rgb(var(--primary-mutedBg))] hover:shadow-lg'
                 }`}
                 data-node-id={`nav-${item.title}`}
                 onClick={() => setCurrentPath(item.href)}
@@ -192,7 +192,7 @@ export default function HeaderNavigationSnu({
                 <span className="leading-[normal] text-nowrap whitespace-pre font-medium">{item.title}</span>
                 {/* Active indicator */}
                 {currentPath === item.href && (
-                  <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-[rgb(var(--primary))] rounded-full" />
+                  <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-[rgb(var(--primary-default))] rounded-full" />
                 )}
               </a>
             </div>
@@ -278,7 +278,7 @@ export default function HeaderNavigationSnu({
               >
                 <h3 className={`font-['Inter:Bold',_'Noto_Sans_KR:Bold',_sans-serif] font-bold text-[18px] mb-4 transition-colors duration-200 ${
                   activeMenu === item.title 
-                    ? 'text-[rgb(var(--primary))]' 
+                    ? 'text-[rgb(var(--primary-default))]' 
                     : 'text-[rgb(var(--text))]'
                 }`}>
                   {item.title}
@@ -291,8 +291,8 @@ export default function HeaderNavigationSnu({
                           href={subItem.href}
                           className={`block text-[14px] transition-all duration-300 ease-out py-2 px-3 rounded-md hover:scale-105 hover:translate-x-1 ${
                             currentPath === subItem.href
-                              ? 'text-[rgb(var(--primary))] bg-[rgb(var(--primary-light))] shadow-sm'
-                              : 'text-[rgb(var(--text-secondary))] hover:text-[rgb(var(--primary))] hover:bg-[rgb(var(--surface-variant))] hover:shadow-sm'
+                              ? 'text-[rgb(var(--primary-default))] bg-[rgb(var(--primary-light))] shadow-sm'
+                              : 'text-[rgb(var(--text-secondary))] hover:text-[rgb(var(--primary-default))] hover:bg-[rgb(var(--primary-mutedBg))] hover:shadow-lg hover:scale-105'
                           }`}
                           onClick={() => {
                             setCurrentPath(subItem.href);
@@ -323,7 +323,7 @@ export default function HeaderNavigationSnu({
                     href={item.href}
                     className={`block font-['Inter:Bold',_'Noto_Sans_KR:Bold',_sans-serif] font-bold text-[18px] mb-3 transition-colors duration-200 ${
                       currentPath === item.href 
-                        ? 'text-[rgb(var(--primary))]' 
+                        ? 'text-[rgb(var(--primary-default))]' 
                         : 'text-[rgb(var(--text))]'
                     }`}
                     onClick={() => {
@@ -341,8 +341,8 @@ export default function HeaderNavigationSnu({
                             href={subItem.href}
                             className={`block text-[14px] transition-all duration-200 py-2 px-2 rounded-md ${
                               currentPath === subItem.href
-                                ? 'text-[rgb(var(--primary))] bg-[rgb(var(--primary-light))]'
-                                : 'text-[rgb(var(--text-secondary))] hover:text-[rgb(var(--primary))] hover:bg-[rgb(var(--surface-variant))]'
+                                ? 'text-[rgb(var(--primary-default))] bg-[rgb(var(--primary-light))]'
+                                : 'text-[rgb(var(--text-secondary))] hover:text-[rgb(var(--primary-default))] hover:bg-[rgb(var(--primary-mutedBg))] hover:shadow-lg hover:scale-105'
                             }`}
                             onClick={() => {
                               setCurrentPath(subItem.href);

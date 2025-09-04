@@ -28,7 +28,7 @@ export default function YouTubeSectionSnu({
         <div className="text-center">
           {/* Play Button */}
           <div 
-            className="bg-[rgb(var(--primary))] content-stretch flex flex-col items-center justify-center overflow-clip rounded-[40px] size-20 mx-auto mb-6 hover:bg-[rgb(var(--primary-dark))] transition-colors duration-300 cursor-pointer"
+            className="bg-[rgb(var(--primary-default))] content-stretch flex flex-col items-center justify-center overflow-clip rounded-[40px] size-20 mx-auto mb-6 hover:bg-[rgb(var(--primary-dark))] transition-colors duration-300 cursor-pointer"
             data-name="Play Button"
           >
             <div 
@@ -52,7 +52,7 @@ export default function YouTubeSectionSnu({
           <div className="mt-6 w-full h-[200px] bg-[rgb(var(--surface-variant))] rounded-[var(--radius)] flex items-center justify-center">
             <div className="text-center">
               <div className="text-[rgb(var(--text-secondary))] text-[14px] mb-2">동영상 썸네일</div>
-              <div className="text-[rgb(var(--primary))] text-[16px] font-medium">스마일라식 수술 과정</div>
+              <div className="text-[rgb(var(--primary-default))] text-[16px] font-medium">스마일라식 수술 과정</div>
             </div>
           </div>
         </div>
@@ -64,7 +64,7 @@ export default function YouTubeSectionSnu({
         data-name="YouTube Text Content"
       >
         <div 
-          className="font-['Inter:Bold',_'Noto_Sans_KR:Bold',_sans-serif] font-bold leading-[0] not-italic relative shrink-0 text-[rgb(var(--primary))] text-[17px]"
+          className="font-['Inter:Bold',_'Noto_Sans_KR:Bold',_sans-serif] font-bold leading-[0] not-italic relative shrink-0 text-[rgb(var(--primary-default))] text-[17px]"
           data-node-id="youtube-section-label"
         >
           <p className="leading-[normal] text-nowrap whitespace-pre">youtube 바로가기</p>
@@ -119,11 +119,11 @@ export default function YouTubeSectionSnu({
           </div>
           <div className="grid grid-cols-2 gap-4 text-[12px]">
             <div className="bg-[rgb(var(--surface-variant))] p-3 rounded-[var(--radius)]">
-              <div className="text-[rgb(var(--primary))] font-bold mb-1">수술 과정</div>
+              <div className="text-[rgb(var(--primary-default))] font-bold mb-1">수술 과정</div>
               <div className="text-[rgb(var(--text-secondary))]">투명한 시술 공개</div>
             </div>
             <div className="bg-[rgb(var(--surface-variant))] p-3 rounded-[var(--radius)]">
-              <div className="text-[rgb(var(--primary))] font-bold mb-1">환자 후기</div>
+              <div className="text-[rgb(var(--primary-default))] font-bold mb-1">환자 후기</div>
               <div className="text-[rgb(var(--text-secondary))]">실제 경험담</div>
             </div>
           </div>
